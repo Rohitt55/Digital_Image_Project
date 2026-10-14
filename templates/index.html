@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f5f7">
+  <title>PixelLab — Digital Image Processing</title>
+  <link rel="icon" href="{{ url_for('static', filename='favicon.svg') }}" type="image/svg+xml">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='usability.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='plain.css') }}">
+  <script src="{{ url_for('static', filename='app.js') }}" defer></script>
+</head>
+<body>
+  <aside class="sidebar">
+    <a href="/" class="brand">PixelLab</a>
+    <button id="mobile-menu" class="mobile-menu" aria-expanded="false" aria-controls="operation-list">Browse operations <span aria-hidden="true">☰</span></button>
+    <p class="sidebar-caption">Operations</p>
+    <label class="search"><span>⌕</span><input id="search" type="search" placeholder="Find an operation…" aria-label="Search operations"></label>
+    <label class="chapter-selector">CHAPTER<select id="chapter-filter" aria-label="Filter operations by chapter"><option value="0">All chapters</option></select></label>
+    <div class="nav-status"><span id="operation-count">Loading…</span><button id="clear-search" class="nav-clear" hidden>Clear filters</button></div>
+    <nav id="operation-list" aria-label="Image processing operations"><p class="muted">Loading operations…</p></nav>
+  </aside>
+  <main>
+    <section class="page-heading"><div><h1>Digital Image Processing Lab</h1><p class="subtitle">Upload an image, select an operation and view the output.</p></div><div class="heading-actions"><button class="button secondary" id="demo-button">Try a sample</button></div></section>
+    <ol class="workflow" aria-label="Your experiment steps"><li id="step-upload" class="current"><span class="step-number">1</span><div><strong>Add an image</strong><small>Upload or use the sample</small></div></li><li id="step-run"><span class="step-number">2</span><div><strong>Choose & run</strong><small>Defaults are ready to use</small></div></li><li id="step-result"><span class="step-number">3</span><div><strong>Compare & save</strong><small>Image, plots and statistics</small></div></li></ol>
+    <section class="upload-zone" id="drop-zone" aria-label="Image upload">
+      <div><strong id="filename">Input image</strong><p id="upload-description">Choose or drop a PNG, JPG, WebP, BMP or TIFF file.</p><span id="upload-details" class="upload-details" hidden></span></div>
+      <label class="button secondary file-label">Choose image<input id="image-upload" type="file" accept="image/*,.tif,.tiff,.bmp"></label>
+    </section>
+    <p id="notice" class="notice" role="status" aria-live="polite" hidden></p>
+    <section class="quick-start" aria-label="Popular operations"><div><strong>Common operations</strong></div><div id="quick-operations" class="quick-operations"></div></section>
+    <section class="control-panel" id="settings-panel">
+      <div class="operation-info"><p class="eyebrow" id="operation-group">COLOR & INTENSITY</p><h2 id="operation-name">Grayscale</h2><p id="operation-explanation"></p><button class="text-button browse-all" id="browse-all">Browse all operations →</button></div>
+      <form id="process-form"><div class="settings-toolbar"><span id="settings-caption">Operation settings</span><button type="button" class="text-button" id="reset-settings">Reset settings ↺</button></div><div id="parameters" class="parameters"></div><div id="reference-wrap" hidden><label class="parameter">Reference image<input type="file" id="reference-upload" accept="image/*,.tif,.tiff,.bmp"></label><span id="reference-name" class="muted"></span><p class="reference-help">This operation compares two images. Choose the second image here.</p></div><div class="run-row"><button type="submit" class="button primary" id="run-button" disabled>Run operation <span>→</span></button><button type="button" class="button secondary" id="download-button" disabled>↓ &nbsp; Download</button><button type="button" class="button secondary" id="download-encoded" hidden disabled>Download encoded file</button></div><p id="run-help" class="run-help" aria-live="polite">Add an image to get started.</p></form>
+    </section>
+    <div class="result-heading"><div><h2>Output</h2></div><span id="result-status" class="result-status">No result yet</span></div>
+    <section class="studio-grid">
+      <article class="image-card"><div class="card-heading"><h2><span class="card-dot"></span> Original image</h2><div class="image-tools"><span class="image-meta" id="original-meta">No image yet</span><button id="zoom-original" class="zoom-button" aria-label="Enlarge original image" disabled>⤢</button></div></div><div class="image-stage" id="original-stage"><img id="original-image" alt="Original uploaded image" hidden><div class="empty-state" id="original-empty"><span>▧</span><h3>Input preview</h3><p>No image uploaded.</p></div></div><div class="card-footer"><span>INPUT</span><button class="text-button" id="reset-button" disabled>Reset to uploaded image ↺</button></div></article>
+      <article class="image-card result-card"><div class="card-heading"><h2><span class="card-dot green"></span> Processed image</h2><div class="image-tools"><span id="result-meta" class="image-meta">No result yet</span><button id="zoom-result" class="zoom-button" aria-label="Enlarge processed image" disabled>⤢</button></div></div><div class="image-stage" id="result-stage"><img id="result-image" alt="Processed output image" hidden><div class="empty-state" id="result-empty"><span>✳</span><h3>Processed output</h3><p>Run an operation to display its output.</p></div><div id="result-busy" class="processing-overlay" role="status" hidden><span class="spinner" aria-hidden="true"></span><strong>Processing your image…</strong><span>Generating output and plots</span></div></div><div class="card-footer"><span id="result-label">OUTPUT</span><button class="text-button" id="use-result" disabled>Use as next input →</button></div></article>
+    </section>
+    <section class="analysis-panel">
+      <div class="tabs" role="tablist" aria-label="Experiment details"><button role="tab" id="tab-lab-output" aria-selected="true" aria-controls="lab-output" class="tab active" data-tab="lab-output">Lab output</button><button role="tab" id="tab-insights" aria-selected="false" aria-controls="insights" class="tab" data-tab="insights">Image insights</button><button role="tab" id="tab-algorithm" aria-selected="false" aria-controls="algorithm" class="tab" data-tab="algorithm">Algorithm & code</button><button role="tab" id="tab-history" aria-selected="false" aria-controls="history" class="tab" data-tab="history">Experiment history <span id="history-count">0</span></button></div>
+      <div id="lab-output" class="tab-panel" role="tabpanel" aria-labelledby="tab-lab-output">
+        <div class="lab-heading"><div><h3>Plots</h3><p class="muted">Original and processed images, histograms and CDF.</p></div><button id="save-figure" class="button secondary" disabled>Save figure</button></div>
+        <p id="lab-empty" class="lab-empty">Run an operation to see its Matplotlib figure and printed output here.</p>
+        <a id="lab-figure-link" class="lab-figure-link" target="_blank" rel="noopener" aria-label="Open lab figure at full size" hidden><img id="lab-figure" class="lab-figure" alt="Matplotlib figure with original and processed images, grayscale histograms and cumulative distribution graphs" hidden></a>
+        <details id="console-wrap" class="console-wrap" open hidden><summary>Terminal / printed output <span>Python</span></summary><pre id="lab-console" tabindex="0" aria-label="Python lab printed results"></pre></details>
+      </div>
+      <div id="insights" class="tab-panel" role="tabpanel" aria-labelledby="tab-insights" hidden><div class="stats-grid" id="stats"><div><span>DIMENSIONS</span><strong>—</strong></div><div><span>MEAN INTENSITY</span><strong>—</strong></div><div><span>RMS CONTRAST</span><strong>—</strong></div><div><span>PROCESSING TIME</span><strong>—</strong></div></div><div class="chart-heading"><h3>Intensity distribution</h3><div class="legend"><span class="before-key"></span>Original <span class="after-key"></span>Processed</div></div><canvas id="histogram-chart" height="180" aria-label="Grayscale histogram of original and processed images" role="img"></canvas><div class="chart-axis"><span>0 · Black</span><span>Grayscale pixel intensity</span><span>255 · White</span></div><div id="extra-details" class="extra-details"></div></div>
+      <div id="algorithm" class="tab-panel" role="tabpanel" aria-labelledby="tab-algorithm" hidden><p class="muted">Understand the operation you are running.</p><div id="formula" class="formula"></div><p class="source-line">Course reference: <span id="source"></span></p><p class="source-line">Code type: <span id="code-type"></span><br>Module libraries: <span id="code-libraries"></span></p><details open><summary>Python implementation · <span id="implementation-file">python_code/code_02_image_operations.py</span></summary><pre><code id="python-code"></code></pre></details><p class="muted code-note">Shared helpers: gray() converts BGR to grayscale; normalize() maps values to 0–255. Parameters are validated by execute() before this function runs.</p></div>
+      <div id="history" class="tab-panel" role="tabpanel" aria-labelledby="tab-history" hidden><p class="muted" id="history-empty">Your completed experiments will appear here during this session.</p><div id="history-list"></div></div>
+    </section>
+    <footer class="page-footer"><span>Developed by Rohiit Sarkar &middot; ID: 0802310405101055</span><span>PixelLab</span></footer>
+  </main>
+  <dialog id="image-viewer" class="image-viewer" aria-labelledby="viewer-title"><div class="viewer-heading"><h2 id="viewer-title">Image preview</h2><button id="close-viewer" class="button secondary" autofocus>Close ✕</button></div><img id="viewer-image" alt="Enlarged image preview"></dialog>
+</body>
+</html>

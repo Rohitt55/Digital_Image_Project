@@ -1,0 +1,10 @@
+"""Load the callable image algorithms into the operation registry."""
+import code_05_image_fundamentals
+import code_06_image_enhancement
+import code_07_color_processing
+import code_08_image_transforms
+import code_09_image_segmentation
+import code_10_image_restoration
+import code_11_image_compression
+import code_13_morphological_operations
+import code_14_learning_demos

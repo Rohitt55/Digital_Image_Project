@@ -1,0 +1,1995 @@
+[
+  {
+    "chapter": 1,
+    "topic": "Image acquisition and ADC digitization",
+    "source": "Chap1 Digital Image Fundamentals.pdf",
+    "pages": [
+      2,
+      3
+    ],
+    "kind": "concept",
+    "explanation": "Camera/CCD/scanner acquisition; analog voltage mapped to finite gray levels.",
+    "formula": "L=2^k",
+    "operation_candidate": "digitization_demo"
+  },
+  {
+    "chapter": 1,
+    "topic": "Human eye structure and image formation",
+    "source": "Chap1 Digital Image Fundamentals.pdf",
+    "pages": [
+      4,
+      5,
+      6,
+      7
+    ],
+    "kind": "concept",
+    "explanation": "Pupil, iris, lens, retina, rods/cones, focal distance and visual image formation.",
+    "formula": "",
+    "operation_candidate": "eye_formation_demo"
+  },
+  {
+    "chapter": 1,
+    "topic": "Visual perception",
+    "source": "Chap1 Digital Image Fundamentals.pdf",
+    "pages": [
+      8,
+      29,
+      30,
+      31,
+      32,
+      33
+    ],
+    "kind": "concept",
+    "explanation": "Shape, size, color, depth, motion, patterns; electromagnetic/acoustic imaging and perceived contrast.",
+    "formula": "",
+    "operation_candidate": "perception_demo"
+  },
+  {
+    "chapter": 1,
+    "topic": "Pupil detection and centroid gaze demo",
+    "source": "Chap1 Digital Image Fundamentals.pdf",
+    "pages": [
+      9,
+      10,
+      11,
+      12,
+      13
+    ],
+    "kind": "algorithm",
+    "explanation": "Threshold dark pupil pixels, calculate centroid and relative gaze displacement; illustrate yaw/pitch direction.",
+    "formula": "cx=sum(x*M)/sum(M); cy=sum(y*M)/sum(M); g=(cos(phi)sin(theta),sin(phi),cos(phi)cos(theta))",
+    "operation_candidate": "pupil_demo"
+  },
+  {
+    "chapter": 1,
+    "topic": "CNN GazeNet feature fusion and FC demo",
+    "source": "Chap1 Digital Image Fundamentals.pdf",
+    "pages": [
+      14,
+      15,
+      16,
+      17
+    ],
+    "kind": "concept",
+    "explanation": "Face/eye feature vectors and optional head pose pass through FC layers to predict gaze; educational arithmetic without trained weights.",
+    "formula": "z=W*x+b",
+    "operation_candidate": "gazenet_fc_demo"
+  },
+  {
+    "chapter": 1,
+    "topic": "Picture, image, pixels and neighborhoods",
+    "source": "Chap1 Digital Image Fundamentals.pdf",
+    "pages": [
+      18,
+      19,
+      20
+    ],
+    "kind": "concept",
+    "explanation": "Image as a discrete pixel array and neighborhood of each pixel.",
+    "formula": "",
+    "operation_candidate": "pixel_matrix"
+  },
+  {
+    "chapter": 1,
+    "topic": "Resolution, DPI/LPI/PPI, megapixels",
+    "source": "Chap1 Digital Image Fundamentals.pdf",
+    "pages": [
+      21,
+      22,
+      23,
+      26
+    ],
+    "kind": "concept",
+    "explanation": "Calculate spatial resolution, physical dimensions, pixel count and print/display density.",
+    "formula": "pixels=M*N; inches=pixels/DPI",
+    "operation_candidate": "image_metrics"
+  },
+  {
+    "chapter": 1,
+    "topic": "Video frame rate",
+    "source": "Chap1 Digital Image Fundamentals.pdf",
+    "pages": [
+      24,
+      25
+    ],
+    "kind": "concept",
+    "explanation": "Calculate frames per second and understand motion sampling.",
+    "formula": "FPS=frame_count/time_seconds",
+    "operation_candidate": "fps_demo"
+  },
+  {
+    "chapter": 1,
+    "topic": "Image memory and bit depth",
+    "source": "Chap1 Digital Image Fundamentals.pdf",
+    "pages": [
+      27,
+      28,
+      67
+    ],
+    "kind": "concept",
+    "explanation": "Uncompressed storage and number of intensity levels.",
+    "formula": "bytes=M*N*channels*bits_per_channel/8; L=2^k",
+    "operation_candidate": "image_metrics"
+  },
+  {
+    "chapter": 1,
+    "topic": "DIP purpose, applications, computer vision and cognitive science",
+    "source": "Chap1 Digital Image Fundamentals.pdf",
+    "pages": [
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44
+    ],
+    "kind": "concept",
+    "explanation": "Enhancement/restoration/compression, medical/agriculture applications, CV and perception.",
+    "formula": "",
+    "operation_candidate": "pipeline_demo"
+  },
+  {
+    "chapter": 1,
+    "topic": "DIP processing pipeline",
+    "source": "Chap1 Digital Image Fundamentals.pdf",
+    "pages": [
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54
+    ],
+    "kind": "concept",
+    "explanation": "Acquisition, enhancement, restoration, morphology, segmentation, representation, recognition, compression and color processing.",
+    "formula": "",
+    "operation_candidate": "pipeline_demo"
+  },
+  {
+    "chapter": 1,
+    "topic": "Binary, grayscale and true RGB images",
+    "source": "Chap1 Digital Image Fundamentals.pdf",
+    "pages": [
+      55,
+      56,
+      57
+    ],
+    "kind": "algorithm",
+    "explanation": "Convert and inspect basic digital image types.",
+    "formula": "binary=(gray>=T); RGB=(R,G,B)",
+    "operation_candidate": "grayscale"
+  },
+  {
+    "chapter": 1,
+    "topic": "Indexed images and palette mapping",
+    "source": "Chap1 Digital Image Fundamentals.pdf",
+    "pages": [
+      58,
+      59,
+      60,
+      61
+    ],
+    "kind": "algorithm",
+    "explanation": "Store palette indices, reconstruct RGB from palette and compare storage.",
+    "formula": "RGB(x,y)=palette[index(x,y)]",
+    "operation_candidate": "palette"
+  },
+  {
+    "chapter": 1,
+    "topic": "Digital image function and matrix representation",
+    "source": "Chap1 Digital Image Fundamentals.pdf",
+    "pages": [
+      64,
+      65,
+      66,
+      67
+    ],
+    "kind": "concept",
+    "explanation": "A continuous 2D function sampled as an M by N numerical array.",
+    "formula": "a_ij=f(i,j)",
+    "operation_candidate": "pixel_matrix"
+  },
+  {
+    "chapter": 1,
+    "topic": "Row/column feature vectors",
+    "source": "Chap1 Digital Image Fundamentals.pdf",
+    "pages": [
+      68
+    ],
+    "kind": "algorithm",
+    "explanation": "Extract sums of rows and columns as a simple classification feature vector.",
+    "formula": "F=concat(sum_rows(I),sum_columns(I))",
+    "operation_candidate": "features"
+  },
+  {
+    "chapter": 1,
+    "topic": "Rule-based digit classification demo",
+    "source": "Chap1 Digital Image Fundamentals.pdf",
+    "pages": [
+      69,
+      70
+    ],
+    "kind": "algorithm",
+    "explanation": "Classify example 3 by 3 patterns using row/column threshold rules.",
+    "formula": "class=1 if col2>400 and row2>200 and row3>200 else 0",
+    "operation_candidate": "digit_classifier"
+  },
+  {
+    "chapter": 1,
+    "topic": "Foreground, boundary and shape description",
+    "source": "Chap1 Digital Image Fundamentals.pdf",
+    "pages": [
+      71,
+      72,
+      73,
+      91
+    ],
+    "kind": "algorithm",
+    "explanation": "Foreground coordinates, boundary coordinates, area/perimeter/centroid descriptors.",
+    "formula": "area=sum(M); centroid=sum(coords*M)/sum(M)",
+    "operation_candidate": "shape_features"
+  },
+  {
+    "chapter": 1,
+    "topic": "Gaussian, standard-normal, half-normal and exponential PDF/CDF",
+    "source": "Chap1 Digital Image Fundamentals.pdf",
+    "pages": [
+      74,
+      75,
+      76,
+      77,
+      78,
+      79
+    ],
+    "kind": "concept",
+    "explanation": "Inspect probability models with PDF and CDF plots; parameter interpretation.",
+    "formula": "normal_pdf=exp(-(x-mu)^2/(2*sigma^2))/(sigma*sqrt(2*pi)); exponential_pdf=lambda*exp(-lambda*x)",
+    "operation_candidate": "distribution_demo"
+  },
+  {
+    "chapter": 1,
+    "topic": "Gaussian noise generation",
+    "source": "Chap1 Digital Image Fundamentals.pdf",
+    "pages": [
+      80
+    ],
+    "kind": "algorithm",
+    "explanation": "Add a normal-distributed random intensity perturbation.",
+    "formula": "g=f+N(mu,sigma^2)",
+    "operation_candidate": "noise"
+  },
+  {
+    "chapter": 1,
+    "topic": "Parametric Gaussian foreground/background classifier",
+    "source": "Chap1 Digital Image Fundamentals.pdf",
+    "pages": [
+      81,
+      82
+    ],
+    "kind": "algorithm",
+    "explanation": "Estimate class mean/variance from intensity samples and classify by Gaussian likelihood.",
+    "formula": "class=argmax_c p(x|mu_c,sigma_c)",
+    "operation_candidate": "parametric_classifier"
+  },
+  {
+    "chapter": 1,
+    "topic": "Entropy and image information",
+    "source": "Chap1 Digital Image Fundamentals.pdf",
+    "pages": [
+      83,
+      84
+    ],
+    "kind": "algorithm",
+    "explanation": "Compute histogram probabilities and Shannon image entropy.",
+    "formula": "H=-sum(p*log2(p))",
+    "operation_candidate": "entropy"
+  },
+  {
+    "chapter": 1,
+    "topic": "Manhattan, Chebyshev, Euclidean and Minkowski distances",
+    "source": "Chap1 Digital Image Fundamentals.pdf",
+    "pages": [
+      85,
+      86,
+      87,
+      88
+    ],
+    "kind": "algorithm",
+    "explanation": "Calculate distances between selected pixels with different metrics.",
+    "formula": "D4=abs(dx)+abs(dy); D8=max(abs(dx),abs(dy)); De=sqrt(dx^2+dy^2); Dp=(sum(abs(delta)^p))^(1/p)",
+    "operation_candidate": "distance"
+  },
+  {
+    "chapter": 1,
+    "topic": "Digital depth, regions and curves",
+    "source": "Chap1 Digital Image Fundamentals.pdf",
+    "pages": [
+      91,
+      92,
+      93,
+      94,
+      95
+    ],
+    "kind": "algorithm",
+    "explanation": "Boundary-to-interior depth and digital curves as adjacent pixel sequences.",
+    "formula": "depth=distance_to_background(M)",
+    "operation_candidate": "digital_depth"
+  },
+  {
+    "chapter": 1,
+    "topic": "4, diagonal, 8 and mixed neighborhoods/adjacency",
+    "source": "Chap1 Digital Image Fundamentals.pdf",
+    "pages": [
+      96,
+      97,
+      98,
+      99,
+      100,
+      101,
+      102
+    ],
+    "kind": "concept",
+    "explanation": "Von Neumann, Moore and mixed adjacency with foreground value set V.",
+    "formula": "m-adjacent diagonal pair requires N4(p) intersection N4(q) contains no pixel in V",
+    "operation_candidate": "connectivity_demo"
+  },
+  {
+    "chapter": 1,
+    "topic": "Shortest 4, 8 and m connected paths",
+    "source": "Chap1 Digital Image Fundamentals.pdf",
+    "pages": [
+      86,
+      94,
+      95,
+      103,
+      104,
+      105,
+      106,
+      107
+    ],
+    "kind": "algorithm",
+    "explanation": "Find shortest path over allowed pixels using connectivity-aware BFS.",
+    "formula": "length=number_of_edges(path)",
+    "operation_candidate": "shortest_path"
+  },
+  {
+    "chapter": 1,
+    "topic": "Pixel connectivity, components and connectivity graphs",
+    "source": "Chap1 Digital Image Fundamentals.pdf",
+    "pages": [
+      108,
+      109,
+      110,
+      111,
+      112,
+      113,
+      114,
+      115,
+      116
+    ],
+    "kind": "algorithm",
+    "explanation": "Label connected regions and demonstrate graph edges for neighborhood modes.",
+    "formula": "",
+    "operation_candidate": "components"
+  },
+  {
+    "chapter": 1,
+    "topic": "2D 4/6/8 and 3D 6/18/26 connectivity",
+    "source": "Chap1 Digital Image Fundamentals.pdf",
+    "pages": [
+      117,
+      118,
+      119,
+      120,
+      121,
+      122,
+      123,
+      124,
+      125
+    ],
+    "kind": "concept",
+    "explanation": "Illustrate planar and volumetric neighborhood types and connectivity tables.",
+    "formula": "",
+    "operation_candidate": "connectivity_3d_demo"
+  },
+  {
+    "chapter": 1,
+    "topic": "Linear versus nonlinear operations",
+    "source": "Chap1 Digital Image Fundamentals.pdf",
+    "pages": [
+      128,
+      129
+    ],
+    "kind": "concept",
+    "explanation": "Compare weighted-sum box filtering against nonlinear median filtering; superposition.",
+    "formula": "T(a*f+b*g)=a*T(f)+b*T(g)",
+    "operation_candidate": "linearity_demo"
+  },
+  {
+    "chapter": 1,
+    "topic": "Illumination-reflectance image model",
+    "source": "Chap1 Digital Image Fundamentals.pdf",
+    "pages": [
+      130,
+      131,
+      132
+    ],
+    "kind": "concept",
+    "explanation": "Image formed from illumination multiplied by surface reflectance.",
+    "formula": "f(x,y)=i(x,y)*r(x,y); i>=0; 0<=r<=1",
+    "operation_candidate": "illumination"
+  },
+  {
+    "chapter": 1,
+    "topic": "Spatial sampling",
+    "source": "Chap1 Digital Image Fundamentals.pdf",
+    "pages": [
+      133,
+      134,
+      135,
+      136,
+      138,
+      139
+    ],
+    "kind": "algorithm",
+    "explanation": "Subsample spatial image locations and illustrate lost detail.",
+    "formula": "sample=f(step*x,step*y)",
+    "operation_candidate": "sampling"
+  },
+  {
+    "chapter": 1,
+    "topic": "Uniform grayscale and color quantization",
+    "source": "Chap1 Digital Image Fundamentals.pdf",
+    "pages": [
+      137,
+      140,
+      141,
+      142,
+      143,
+      144,
+      147
+    ],
+    "kind": "algorithm",
+    "explanation": "Reduce amplitude precision separately for grayscale or RGB channels.",
+    "formula": "q=round(r*(L-1)/255)*255/(L-1)",
+    "operation_candidate": "quantization"
+  },
+  {
+    "chapter": 1,
+    "topic": "K-means grayscale quantization",
+    "source": "Chap1 Digital Image Fundamentals.pdf",
+    "pages": [
+      148,
+      149
+    ],
+    "kind": "algorithm",
+    "explanation": "Iteratively cluster grayscale pixels into representative centroids.",
+    "formula": "assign=argmin_j abs(x-c_j); c_j=mean(cluster_j)",
+    "operation_candidate": "kmeans_quantization"
+  },
+  {
+    "chapter": 1,
+    "topic": "Max-Lloyd quantization",
+    "source": "Chap1 Digital Image Fundamentals.pdf",
+    "pages": [
+      150,
+      151,
+      152,
+      153
+    ],
+    "kind": "algorithm",
+    "explanation": "Optimize nonuniform scalar quantizer boundaries and reproduction levels for minimal MSE.",
+    "formula": "boundary_j=(q_j+q_(j+1))/2; q_j=mean(cell_j)",
+    "operation_candidate": "lloyd_quantization"
+  },
+  {
+    "chapter": 1,
+    "topic": "Nearest, bilinear and bicubic interpolation",
+    "source": "Chap1 Digital Image Fundamentals.pdf",
+    "pages": [
+      154,
+      155,
+      156,
+      157,
+      158,
+      159,
+      160,
+      161,
+      162,
+      163,
+      164,
+      165
+    ],
+    "kind": "algorithm",
+    "explanation": "Upsample/resample images using one, four or sixteen neighbors.",
+    "formula": "bilinear=a*x+b*y+c*x*y+d; bicubic=sum(a_ij*x^i*y^j)",
+    "operation_candidate": "resize"
+  },
+  {
+    "chapter": 1,
+    "topic": "X-ray dark-region threshold example",
+    "source": "Chap1 Digital Image Fundamentals.pdf",
+    "pages": [
+      166,
+      167,
+      168
+    ],
+    "kind": "algorithm",
+    "explanation": "Educational low-intensity region detection, boundary and contrast pipeline; not a clinical diagnosis.",
+    "formula": "mask=(gray<T)",
+    "operation_candidate": "dark_region"
+  },
+  {
+    "chapter": 1,
+    "topic": "Image negative",
+    "source": "Chap1 Digital Image Fundamentals.pdf",
+    "pages": [
+      34
+    ],
+    "kind": "algorithm",
+    "explanation": "Invert grayscale intensity.",
+    "formula": "s=L-1-r",
+    "operation_candidate": "negative"
+  },
+  {
+    "chapter": 2,
+    "topic": "Histogram, normalized histogram, PDF and CDF",
+    "source": "Chap2 Image Enhancement.pdf",
+    "pages": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29
+    ],
+    "kind": "algorithm",
+    "explanation": "Count intensity bins, normalize probabilities and accumulate CDF; plot whole image or selected subimage.",
+    "formula": "h(r_k)=n_k; p(r_k)=n_k/(M*N); CDF=sum(p)",
+    "operation_candidate": "histogram"
+  },
+  {
+    "chapter": 2,
+    "topic": "Brightness, contrast and histogram moments",
+    "source": "Chap2 Image Enhancement.pdf",
+    "pages": [
+      3,
+      8,
+      9,
+      10
+    ],
+    "kind": "algorithm",
+    "explanation": "Compute mean, variance, standard deviation and central moments.",
+    "formula": "mean=sum(z*p(z)); moment_n=sum((z-mean)^n*p(z))",
+    "operation_candidate": "histogram"
+  },
+  {
+    "chapter": 2,
+    "topic": "Histogram/contrast stretching",
+    "source": "Chap2 Image Enhancement.pdf",
+    "pages": [
+      5,
+      11,
+      12,
+      13,
+      14
+    ],
+    "kind": "algorithm",
+    "explanation": "Linearly map observed intensity range into full output range.",
+    "formula": "s=(r-min)/(max-min)*(L-1)",
+    "operation_candidate": "stretch"
+  },
+  {
+    "chapter": 2,
+    "topic": "Histogram equalization and intensity mapping",
+    "source": "Chap2 Image Enhancement.pdf",
+    "pages": [
+      15,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29
+    ],
+    "kind": "algorithm",
+    "explanation": "Map intensities using cumulative histogram probabilities.",
+    "formula": "s_k=(L-1)*sum_(j<=k)(p_j)",
+    "operation_candidate": "equalize_basic"
+  },
+  {
+    "chapter": 2,
+    "topic": "Adaptive histogram equalization (AHE)",
+    "source": "Chap2 Image Enhancement.pdf",
+    "pages": [
+      16
+    ],
+    "kind": "algorithm",
+    "explanation": "Equalize local histograms without contrast clipping; different from CLAHE.",
+    "formula": "s=(L-1)*CDF_local(r)",
+    "operation_candidate": "ahe"
+  },
+  {
+    "chapter": 2,
+    "topic": "Contrast-limited AHE (CLAHE)",
+    "source": "Chap2 Image Enhancement.pdf",
+    "pages": [
+      17
+    ],
+    "kind": "algorithm",
+    "explanation": "Clip local histograms and interpolate neighboring tile mappings to constrain noise amplification.",
+    "formula": "",
+    "operation_candidate": "clahe"
+  },
+  {
+    "chapter": 2,
+    "topic": "Histogram matching/specification",
+    "source": "Chap2 Image Enhancement.pdf",
+    "pages": [
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40
+    ],
+    "kind": "algorithm",
+    "explanation": "Map source CDF to reference CDF to match intensity distributions.",
+    "formula": "s=G_inverse(T(r))",
+    "operation_candidate": "histogram_match"
+  },
+  {
+    "chapter": 2,
+    "topic": "Spatial correlation and convolution",
+    "source": "Chap2 Image Enhancement.pdf",
+    "pages": [
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61
+    ],
+    "kind": "algorithm",
+    "explanation": "Apply user or preset kernel; convolution flips the mask while correlation does not.",
+    "formula": "correlation=sum(w(s,t)*f(x+s,y+t)); convolution=sum(w(s,t)*f(x-s,y-t))",
+    "operation_candidate": "custom_kernel"
+  },
+  {
+    "chapter": 2,
+    "topic": "Kernel dimensions, padding and output support",
+    "source": "Chap2 Image Enhancement.pdf",
+    "pages": [
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      145,
+      146,
+      147,
+      148
+    ],
+    "kind": "concept",
+    "explanation": "Mask/template/window definitions; valid/same/full dimensions and boundary padding.",
+    "formula": "full_shape=(M+m-1,N+n-1)",
+    "operation_candidate": "kernel_support_demo"
+  },
+  {
+    "chapter": 2,
+    "topic": "LTI system properties",
+    "source": "Chap2 Image Enhancement.pdf",
+    "pages": [
+      62,
+      63,
+      64
+    ],
+    "kind": "concept",
+    "explanation": "Linearity, shift invariance and convolution-system properties.",
+    "formula": "T(a*x+b*y)=a*T(x)+b*T(y)",
+    "operation_candidate": "lti_demo"
+  },
+  {
+    "chapter": 2,
+    "topic": "Finite impulse response (FIR) filters",
+    "source": "Chap2 Image Enhancement.pdf",
+    "pages": [
+      65,
+      66,
+      67,
+      68,
+      69
+    ],
+    "kind": "concept",
+    "explanation": "Finite support filters; rotate kernel then accumulate neighborhood products.",
+    "formula": "y[n]=sum_k(h[k]*x[n-k])",
+    "operation_candidate": "fir_demo"
+  },
+  {
+    "chapter": 2,
+    "topic": "Spatial filter taxonomy",
+    "source": "Chap2 Image Enhancement.pdf",
+    "pages": [
+      72,
+      73,
+      74,
+      75,
+      76
+    ],
+    "kind": "concept",
+    "explanation": "Linear/nonlinear, smoothing/sharpening and spatial/frequency domain classifications.",
+    "formula": "",
+    "operation_candidate": "filter_taxonomy_demo"
+  },
+  {
+    "chapter": 2,
+    "topic": "First and second partial derivatives",
+    "source": "Chap2 Image Enhancement.pdf",
+    "pages": [
+      77,
+      78,
+      79
+    ],
+    "kind": "algorithm",
+    "explanation": "Discrete derivative response images and relation to edge/detail detection.",
+    "formula": "dx=f(x+1,y)-f(x,y); dxx=f(x+1,y)+f(x-1,y)-2*f(x,y)",
+    "operation_candidate": "derivatives"
+  },
+  {
+    "chapter": 2,
+    "topic": "Mean, box and weighted mean smoothing",
+    "source": "Chap2 Image Enhancement.pdf",
+    "pages": [
+      80,
+      81,
+      82,
+      83,
+      84,
+      85,
+      86,
+      87,
+      88,
+      106,
+      111,
+      145,
+      146,
+      147,
+      148
+    ],
+    "kind": "algorithm",
+    "explanation": "Neighborhood average or normalized weighted kernel; noise/detail tradeoff.",
+    "formula": "g=sum(w*f)/sum(w)",
+    "operation_candidate": "mean"
+  },
+  {
+    "chapter": 2,
+    "topic": "Gaussian spatial smoothing",
+    "source": "Chap2 Image Enhancement.pdf",
+    "pages": [
+      86,
+      87,
+      113,
+      115,
+      116,
+      117,
+      118,
+      119,
+      120
+    ],
+    "kind": "algorithm",
+    "explanation": "Normalized isotropic Gaussian kernel, separable implementation and blur.",
+    "formula": "G(s,t)=K*exp(-(s^2+t^2)/(2*sigma^2))",
+    "operation_candidate": "gaussian"
+  },
+  {
+    "chapter": 2,
+    "topic": "Minimum and maximum order-statistic filters",
+    "source": "Chap2 Image Enhancement.pdf",
+    "pages": [
+      89,
+      90
+    ],
+    "kind": "algorithm",
+    "explanation": "Replace center by smallest or largest neighborhood value.",
+    "formula": "min_filter=min(window); max_filter=max(window)",
+    "operation_candidate": "rank_filter"
+  },
+  {
+    "chapter": 2,
+    "topic": "Median order-statistic filter",
+    "source": "Chap2 Image Enhancement.pdf",
+    "pages": [
+      89,
+      90,
+      91,
+      92,
+      93,
+      94,
+      95,
+      96,
+      97,
+      98,
+      99,
+      100,
+      101,
+      102
+    ],
+    "kind": "algorithm",
+    "explanation": "Neighborhood median removes impulse noise while preserving more edges than averaging.",
+    "formula": "g(x,y)=median(window)",
+    "operation_candidate": "median"
+  },
+  {
+    "chapter": 2,
+    "topic": "Ensemble image averaging",
+    "source": "Chap2 Image Enhancement.pdf",
+    "pages": [
+      103,
+      104,
+      105
+    ],
+    "kind": "algorithm",
+    "explanation": "Average multiple simulated independent zero-mean noisy observations and show reduced variance.",
+    "formula": "gbar=sum(g_k)/K; sigma_out=sigma/sqrt(K)",
+    "operation_candidate": "ensemble_average"
+  },
+  {
+    "chapter": 2,
+    "topic": "Separable kernel filtering",
+    "source": "Chap2 Image Enhancement.pdf",
+    "pages": [
+      107,
+      108
+    ],
+    "kind": "algorithm",
+    "explanation": "Factor a rank-one 2D kernel into horizontal and vertical filters; compare computational result.",
+    "formula": "w=w1*w2^T",
+    "operation_candidate": "separable_filter"
+  },
+  {
+    "chapter": 2,
+    "topic": "1D spatial/frequency low/high-pass demonstration",
+    "source": "Chap2 Image Enhancement.pdf",
+    "pages": [
+      112,
+      113,
+      114,
+      115,
+      138
+    ],
+    "kind": "concept",
+    "explanation": "Show sampled signal filtering and the relationship of frequency mask to spatial kernel.",
+    "formula": "G=H*F",
+    "operation_candidate": "signal_filter_demo"
+  },
+  {
+    "chapter": 2,
+    "topic": "Ideal low-pass and high-pass frequency filters",
+    "source": "Chap2 Image Enhancement.pdf",
+    "pages": [
+      121,
+      125,
+      126,
+      127
+    ],
+    "kind": "algorithm",
+    "explanation": "Circular hard cutoff preserves/removes low-frequency components; demonstrate ringing.",
+    "formula": "H_LP=1 if D<=D0 else 0; H_HP=1-H_LP",
+    "operation_candidate": "frequency_filter"
+  },
+  {
+    "chapter": 2,
+    "topic": "Butterworth low-pass and high-pass frequency filters",
+    "source": "Chap2 Image Enhancement.pdf",
+    "pages": [
+      122,
+      123,
+      125,
+      126,
+      127
+    ],
+    "kind": "algorithm",
+    "explanation": "Smooth frequency cutoff with adjustable order.",
+    "formula": "H_LP=1/(1+(D/D0)^(2*n)); H_HP=1-H_LP",
+    "operation_candidate": "frequency_filter"
+  },
+  {
+    "chapter": 2,
+    "topic": "Gaussian low-pass and high-pass frequency filters",
+    "source": "Chap2 Image Enhancement.pdf",
+    "pages": [
+      124,
+      125,
+      126,
+      127
+    ],
+    "kind": "algorithm",
+    "explanation": "Gaussian frequency mask with smooth spatial response.",
+    "formula": "H_LP=exp(-D^2/(2*D0^2)); H_HP=1-H_LP",
+    "operation_candidate": "frequency_filter"
+  },
+  {
+    "chapter": 2,
+    "topic": "Fingerprint patterns and minutiae",
+    "source": "Chap2 Image Enhancement.pdf",
+    "pages": [
+      128,
+      129,
+      130,
+      131,
+      132
+    ],
+    "kind": "concept",
+    "explanation": "Arch/loop/whorl, ridge ending, bifurcation, island, enclosure and acquisition-to-matching pipeline.",
+    "formula": "",
+    "operation_candidate": "fingerprint_demo"
+  },
+  {
+    "chapter": 2,
+    "topic": "Fingerprint enhancement and orientation demonstration",
+    "source": "Chap2 Image Enhancement.pdf",
+    "pages": [
+      131,
+      132,
+      133,
+      134,
+      135,
+      136,
+      137
+    ],
+    "kind": "algorithm",
+    "explanation": "Enhance ridges via contrast/filtering and display gradient orientation; explain relative cutoff choice.",
+    "formula": "theta=atan2(grad_y,grad_x)",
+    "operation_candidate": "fingerprint_enhance"
+  },
+  {
+    "chapter": 2,
+    "topic": "Spatial versus frequency domain filtering",
+    "source": "Chap2 Image Enhancement.pdf",
+    "pages": [
+      138
+    ],
+    "kind": "concept",
+    "explanation": "Convolution in space equals multiplication of spectra; padding avoids wraparound.",
+    "formula": "g=f*h=IFFT(F*H)",
+    "operation_candidate": "convolution_theorem"
+  },
+  {
+    "chapter": 2,
+    "topic": "Ideal bandreject and bandpass filters",
+    "source": "Chap2 Image Enhancement.pdf",
+    "pages": [
+      139,
+      140,
+      141,
+      142
+    ],
+    "kind": "algorithm",
+    "explanation": "Reject/select an annulus with center frequency and width.",
+    "formula": "H_BR=0 if abs(D-D0)<=W/2 else 1; H_BP=1-H_BR",
+    "operation_candidate": "frequency_filter"
+  },
+  {
+    "chapter": 2,
+    "topic": "Butterworth bandreject and bandpass filters",
+    "source": "Chap2 Image Enhancement.pdf",
+    "pages": [
+      139,
+      140,
+      141,
+      142
+    ],
+    "kind": "algorithm",
+    "explanation": "Smooth band filter controlled by center radius, width and order.",
+    "formula": "H_BR=1/(1+(D*W/(D^2-D0^2))^(2*n)); H_BP=1-H_BR",
+    "operation_candidate": "frequency_filter"
+  },
+  {
+    "chapter": 2,
+    "topic": "Gaussian bandreject and bandpass filters",
+    "source": "Chap2 Image Enhancement.pdf",
+    "pages": [
+      139,
+      140,
+      141,
+      142
+    ],
+    "kind": "algorithm",
+    "explanation": "Gaussian-shaped attenuation/selectivity in a frequency annulus.",
+    "formula": "H_BR=1-exp(-((D^2-D0^2)/(D*W))^2); H_BP=1-H_BR",
+    "operation_candidate": "frequency_filter"
+  },
+  {
+    "chapter": 2,
+    "topic": "Laplacian response and sharpening",
+    "source": "Chap2 Image Enhancement.pdf",
+    "pages": [
+      149,
+      150,
+      151,
+      152
+    ],
+    "kind": "algorithm",
+    "explanation": "Second spatial derivative and signed Laplacian combination with input for sharpening.",
+    "formula": "lap=f(x+1,y)+f(x-1,y)+f(x,y+1)+f(x,y-1)-4*f(x,y); sharp=f-lap",
+    "operation_candidate": "laplacian"
+  },
+  {
+    "chapter": 2,
+    "topic": "Unsharp masking and high-boost filtering",
+    "source": "Chap2 Image Enhancement.pdf",
+    "pages": [
+      153,
+      154
+    ],
+    "kind": "algorithm",
+    "explanation": "Subtract blurred image, then add scaled residual to enhance detail.",
+    "formula": "mask=f-blur(f); g=f+k*mask",
+    "operation_candidate": "sharpen"
+  },
+  {
+    "chapter": 2,
+    "topic": "Haar wavelet and subband decomposition",
+    "source": "Chap2 Image Enhancement.pdf",
+    "pages": [
+      155,
+      156,
+      157,
+      158,
+      164,
+      165
+    ],
+    "kind": "algorithm",
+    "explanation": "Row/column low/high-pass wavelet decomposition; LL,LH,HL,HH detail and multilevel approximation.",
+    "formula": "a=(x_even+x_odd)/sqrt(2); d=(x_even-x_odd)/sqrt(2)",
+    "operation_candidate": "wavelet"
+  },
+  {
+    "chapter": 2,
+    "topic": "Daubechies db4 and db8 wavelets",
+    "source": "Chap2 Image Enhancement.pdf",
+    "pages": [
+      155
+    ],
+    "kind": "algorithm",
+    "explanation": "Named smoother wavelet variants in syllabus, for multiscale image analysis.",
+    "formula": "",
+    "operation_candidate": "wavelet"
+  },
+  {
+    "chapter": 2,
+    "topic": "Wavelet applications and comparison to DCT",
+    "source": "Chap2 Image Enhancement.pdf",
+    "pages": [
+      155
+    ],
+    "kind": "concept",
+    "explanation": "Localization, multiresolution, JPEG2000, denoising, texture features and blocking behavior.",
+    "formula": "",
+    "operation_candidate": "wavelet"
+  },
+  {
+    "chapter": 2,
+    "topic": "Frequency-domain enhancement/high-frequency emphasis",
+    "source": "Chap2 Image Enhancement.pdf",
+    "pages": [
+      159,
+      160,
+      161,
+      162,
+      163
+    ],
+    "kind": "algorithm",
+    "explanation": "Amplify high-frequency coefficients, then inverse-transform.",
+    "formula": "G=(a+b*H_HP)*F",
+    "operation_candidate": "frequency_emphasis"
+  },
+  {
+    "chapter": 3,
+    "topic": "Color fundamentals, wavelengths and cones",
+    "source": "Chap3-Color Image Processing.pdf",
+    "pages": [
+      2,
+      3,
+      4,
+      15
+    ],
+    "kind": "concept",
+    "explanation": "Visible spectrum, human cones, additive/subtractive primary and secondary color mixing.",
+    "formula": "",
+    "operation_candidate": "color_fundamentals_demo"
+  },
+  {
+    "chapter": 3,
+    "topic": "RGB cube, color vectors and 24-bit color",
+    "source": "Chap3-Color Image Processing.pdf",
+    "pages": [
+      5,
+      6,
+      7,
+      8
+    ],
+    "kind": "concept",
+    "explanation": "Pixel as correlated RGB channel vector and display additive model.",
+    "formula": "colors=(2^8)^3",
+    "operation_candidate": "color_channel"
+  },
+  {
+    "chapter": 3,
+    "topic": "RGB channel extraction",
+    "source": "Chap3-Color Image Processing.pdf",
+    "pages": [
+      5,
+      6,
+      7,
+      8,
+      66
+    ],
+    "kind": "algorithm",
+    "explanation": "Inspect red/green/blue channels and their reconstructions.",
+    "formula": "",
+    "operation_candidate": "color_channel"
+  },
+  {
+    "chapter": 3,
+    "topic": "RGB to/from HSV",
+    "source": "Chap3-Color Image Processing.pdf",
+    "pages": [
+      9,
+      11,
+      20,
+      36
+    ],
+    "kind": "algorithm",
+    "explanation": "Convert hue/saturation/value representation and reconstruct RGB; distinguish V from HSI intensity.",
+    "formula": "V=max(R,G,B); S=(max-min)/max",
+    "operation_candidate": "color_space"
+  },
+  {
+    "chapter": 3,
+    "topic": "RGB to/from XYZ",
+    "source": "Chap3-Color Image Processing.pdf",
+    "pages": [
+      12,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22
+    ],
+    "kind": "algorithm",
+    "explanation": "Linearized sRGB matrix conversion into device-independent tristimulus values.",
+    "formula": "XYZ=M*linear_sRGB",
+    "operation_candidate": "color_space"
+  },
+  {
+    "chapter": 3,
+    "topic": "RGB/XYZ to/from CIELAB",
+    "source": "Chap3-Color Image Processing.pdf",
+    "pages": [
+      12,
+      13,
+      21,
+      22,
+      46
+    ],
+    "kind": "algorithm",
+    "explanation": "Convert perceptual lightness and opponent color axes with reference white and invert.",
+    "formula": "L*=116*f(Y/Yn)-16; a*=500*(f(X/Xn)-f(Y/Yn)); b*=200*(f(Y/Yn)-f(Z/Zn))",
+    "operation_candidate": "color_space"
+  },
+  {
+    "chapter": 3,
+    "topic": "RGB to/from YCbCr",
+    "source": "Chap3-Color Image Processing.pdf",
+    "pages": [
+      9,
+      14,
+      23
+    ],
+    "kind": "algorithm",
+    "explanation": "Separate luma and chroma channels for coding.",
+    "formula": "Y=0.299R+0.587G+0.114B; Cb=128+0.564*(B-Y); Cr=128+0.713*(R-Y)",
+    "operation_candidate": "color_space"
+  },
+  {
+    "chapter": 3,
+    "topic": "RGB to/from YUV",
+    "source": "Chap3-Color Image Processing.pdf",
+    "pages": [
+      14,
+      23,
+      24
+    ],
+    "kind": "algorithm",
+    "explanation": "Luma and signed color-difference conversion; distinguish from digital YCbCr.",
+    "formula": "Y=0.299R+0.587G+0.114B; U=0.492*(B-Y); V=0.877*(R-Y)",
+    "operation_candidate": "color_space"
+  },
+  {
+    "chapter": 3,
+    "topic": "Chromaticity/trichromatic coefficients and spectral tristimulus",
+    "source": "Chap3-Color Image Processing.pdf",
+    "pages": [
+      16,
+      17,
+      18,
+      19
+    ],
+    "kind": "algorithm",
+    "explanation": "Compute normalized XYZ chromaticity and demonstrate spectral-power sums/color matching.",
+    "formula": "X=integral(S(lambda)*xbar(lambda)); x=X/(X+Y+Z); y=Y/(X+Y+Z)",
+    "operation_candidate": "chromaticity"
+  },
+  {
+    "chapter": 3,
+    "topic": "CMY and CMYK conversion/reconstruction",
+    "source": "Chap3-Color Image Processing.pdf",
+    "pages": [
+      25,
+      26,
+      27,
+      28,
+      29,
+      64
+    ],
+    "kind": "algorithm",
+    "explanation": "Subtractive channels and black-key component; handle pure black without division by zero.",
+    "formula": "Cprime=1-R; K=min(Cprime,Mprime,Yprime); C=(Cprime-K)/(1-K)",
+    "operation_candidate": "color_space"
+  },
+  {
+    "chapter": 3,
+    "topic": "RGB to HSI and HSI to RGB",
+    "source": "Chap3-Color Image Processing.pdf",
+    "pages": [
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      54,
+      55,
+      56
+    ],
+    "kind": "algorithm",
+    "explanation": "Convert hue/saturation/arithmetic intensity and reconstruct with three hue sectors.",
+    "formula": "I=(R+G+B)/3; S=1-min(R,G,B)/I; H=acos(0.5*((R-G)+(R-B))/sqrt((R-G)^2+(R-B)*(G-B)))",
+    "operation_candidate": "color_space"
+  },
+  {
+    "chapter": 3,
+    "topic": "Hue and saturation adjustment",
+    "source": "Chap3-Color Image Processing.pdf",
+    "pages": [
+      9,
+      54,
+      55,
+      56,
+      57
+    ],
+    "kind": "algorithm",
+    "explanation": "Modify hue/saturation in HSV or HSI while controlling intensity.",
+    "formula": "",
+    "operation_candidate": "hue_saturation"
+  },
+  {
+    "chapter": 3,
+    "topic": "Per-channel color histogram equalization and adaptive equalization",
+    "source": "Chap3-Color Image Processing.pdf",
+    "pages": [
+      9
+    ],
+    "kind": "algorithm",
+    "explanation": "Compare separate RGB channel equalization to luminance-only equalization/CLAHE.",
+    "formula": "",
+    "operation_candidate": "color_equalize"
+  },
+  {
+    "chapter": 3,
+    "topic": "White balance/color balancing",
+    "source": "Chap3-Color Image Processing.pdf",
+    "pages": [
+      9
+    ],
+    "kind": "algorithm",
+    "explanation": "Correct channel color casts with an explicit gray-world or reference-white assumption.",
+    "formula": "gain_c=mean_all/mean_channel_c",
+    "operation_candidate": "white_balance"
+  },
+  {
+    "chapter": 3,
+    "topic": "Color segmentation in HSV and Lab",
+    "source": "Chap3-Color Image Processing.pdf",
+    "pages": [
+      9
+    ],
+    "kind": "algorithm",
+    "explanation": "Threshold hue/saturation or perceptual colors to isolate selected objects.",
+    "formula": "mask=inRange(color_space,lower,upper)",
+    "operation_candidate": "color_segment"
+  },
+  {
+    "chapter": 3,
+    "topic": "Color smoothing: Gaussian, median and vector mean",
+    "source": "Chap3-Color Image Processing.pdf",
+    "pages": [
+      10,
+      65,
+      66,
+      67
+    ],
+    "kind": "algorithm",
+    "explanation": "Apply neighborhood smoothing per RGB channel or intensity only and compare color preservation.",
+    "formula": "g=mean(color_vectors_in_window)",
+    "operation_candidate": "color_filter"
+  },
+  {
+    "chapter": 3,
+    "topic": "Color edge detection",
+    "source": "Chap3-Color Image Processing.pdf",
+    "pages": [
+      10
+    ],
+    "kind": "algorithm",
+    "explanation": "Compute per-channel or luminance gradients and combine magnitude.",
+    "formula": "mag=sqrt(sum_channels(gx_c^2+gy_c^2))",
+    "operation_candidate": "color_edges"
+  },
+  {
+    "chapter": 3,
+    "topic": "Chrominance subsampling 4:2:0",
+    "source": "Chap3-Color Image Processing.pdf",
+    "pages": [
+      10,
+      14
+    ],
+    "kind": "algorithm",
+    "explanation": "Downsample chroma by two horizontally and vertically while retaining luma; reconstruct color.",
+    "formula": "Y full; Cb/Cr size=(ceil(M/2),ceil(N/2))",
+    "operation_candidate": "chroma_subsample"
+  },
+  {
+    "chapter": 3,
+    "topic": "Color morphology/object analysis",
+    "source": "Chap3-Color Image Processing.pdf",
+    "pages": [
+      10
+    ],
+    "kind": "algorithm",
+    "explanation": "Educational channelwise dilation/erosion on color images; explain channelwise versus vector ordering.",
+    "formula": "",
+    "operation_candidate": "color_morphology"
+  },
+  {
+    "chapter": 3,
+    "topic": "Density/intensity slicing and discrete color coding",
+    "source": "Chap3-Color Image Processing.pdf",
+    "pages": [
+      47,
+      48,
+      49
+    ],
+    "kind": "algorithm",
+    "explanation": "Partition gray range into intervals and assign a palette color to each band.",
+    "formula": "g(x,y)=palette[bin(f(x,y))]",
+    "operation_candidate": "density_slice"
+  },
+  {
+    "chapter": 3,
+    "topic": "Continuous intensity-to-color pseudocolor",
+    "source": "Chap3-Color Image Processing.pdf",
+    "pages": [
+      50,
+      51,
+      52
+    ],
+    "kind": "algorithm",
+    "explanation": "Map grayscale through RGB functions/continuous colormap to visualize intensity.",
+    "formula": "R=T_R(gray); G=T_G(gray); B=T_B(gray)",
+    "operation_candidate": "pseudocolor"
+  },
+  {
+    "chapter": 3,
+    "topic": "Full-color vector transformations",
+    "source": "Chap3-Color Image Processing.pdf",
+    "pages": [
+      53,
+      54,
+      55,
+      56,
+      57
+    ],
+    "kind": "concept",
+    "explanation": "Color pixel vectors may be transformed independently per channel or jointly.",
+    "formula": "g(x,y)=T(f(x,y)); scalar_intensity=k*I",
+    "operation_candidate": "color_transform_demo"
+  },
+  {
+    "chapter": 3,
+    "topic": "Color complements",
+    "source": "Chap3-Color Image Processing.pdf",
+    "pages": [
+      58,
+      59
+    ],
+    "kind": "algorithm",
+    "explanation": "Invert each channel to create complementary colors.",
+    "formula": "g_c=255-f_c",
+    "operation_candidate": "negative"
+  },
+  {
+    "chapter": 3,
+    "topic": "Color slicing with hypercube and hypersphere",
+    "source": "Chap3-Color Image Processing.pdf",
+    "pages": [
+      60,
+      61
+    ],
+    "kind": "algorithm",
+    "explanation": "Keep colors near selected reference using coordinatewise bounds or Euclidean radius; neutralize remaining colors.",
+    "formula": "cube=max(abs(c-a))<=D/2; sphere=sum((c-a)^2)<=R^2",
+    "operation_candidate": "color_slice"
+  },
+  {
+    "chapter": 3,
+    "topic": "Tonal color correction",
+    "source": "Chap3-Color Image Processing.pdf",
+    "pages": [
+      62,
+      63,
+      64
+    ],
+    "kind": "algorithm",
+    "explanation": "Adjust flat/high-key/low-key image tone using shared component curve or intensity-only mapping.",
+    "formula": "",
+    "operation_candidate": "color_tone"
+  },
+  {
+    "chapter": 3,
+    "topic": "Color Laplacian sharpening",
+    "source": "Chap3-Color Image Processing.pdf",
+    "pages": [
+      68
+    ],
+    "kind": "algorithm",
+    "explanation": "Second derivatives per RGB channel, compared with luminance/intensity-only sharpening.",
+    "formula": "lap(c)=(lap(R),lap(G),lap(B))",
+    "operation_candidate": "color_laplacian"
+  },
+  {
+    "chapter": 4,
+    "topic": "Transform purpose and spatial/frequency interpretation",
+    "source": "Chap4-Image Transforms.pdf",
+    "pages": [
+      2,
+      3,
+      4
+    ],
+    "kind": "concept",
+    "explanation": "Low-frequency smooth regions, high-frequency edges, coding and feature analysis.",
+    "formula": "",
+    "operation_candidate": "transform_intro_demo"
+  },
+  {
+    "chapter": 4,
+    "topic": "Single-pixel, neighborhood and geometric operations",
+    "source": "Chap4-Image Transforms.pdf",
+    "pages": [
+      5,
+      6,
+      7,
+      8,
+      15,
+      16
+    ],
+    "kind": "concept",
+    "explanation": "Map one value, combine neighboring values or change pixel coordinates and interpolate.",
+    "formula": "s=T(r); g(x,y)=T(f(x,y))",
+    "operation_candidate": "spatial_operations_demo"
+  },
+  {
+    "chapter": 4,
+    "topic": "2D scaling and crop",
+    "source": "Chap4-Image Transforms.pdf",
+    "pages": [
+      8,
+      9,
+      10
+    ],
+    "kind": "algorithm",
+    "explanation": "Resample scale factors or select a rectangular image region.",
+    "formula": "xprime=sx*x; yprime=sy*y",
+    "operation_candidate": "resize"
+  },
+  {
+    "chapter": 4,
+    "topic": "2D translation",
+    "source": "Chap4-Image Transforms.pdf",
+    "pages": [
+      8,
+      9,
+      10
+    ],
+    "kind": "algorithm",
+    "explanation": "Translate image coordinates with configurable fill/border.",
+    "formula": "xprime=x+tx; yprime=y+ty",
+    "operation_candidate": "translate"
+  },
+  {
+    "chapter": 4,
+    "topic": "2D rotation",
+    "source": "Chap4-Image Transforms.pdf",
+    "pages": [
+      8,
+      9,
+      10,
+      11
+    ],
+    "kind": "algorithm",
+    "explanation": "Rotate image by selected angle and interpolate samples.",
+    "formula": "xprime=x*cos(theta)-y*sin(theta); yprime=x*sin(theta)+y*cos(theta)",
+    "operation_candidate": "rotate_affine"
+  },
+  {
+    "chapter": 4,
+    "topic": "2D shear and general affine transformation",
+    "source": "Chap4-Image Transforms.pdf",
+    "pages": [
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "kind": "algorithm",
+    "explanation": "Apply affine matrix combining scaling, rotation, translation and shear.",
+    "formula": "[xprime,yprime]^T=A*[x,y]^T+t",
+    "operation_candidate": "affine"
+  },
+  {
+    "chapter": 4,
+    "topic": "Image pyramid",
+    "source": "Chap4-Image Transforms.pdf",
+    "pages": [
+      9
+    ],
+    "kind": "algorithm",
+    "explanation": "Generate Gaussian-style downsampled or expanded resolution levels, from named impyramid example.",
+    "formula": "",
+    "operation_candidate": "pyramid"
+  },
+  {
+    "chapter": 4,
+    "topic": "3D scaling, translation, rotation and affine point demo",
+    "source": "Chap4-Image Transforms.pdf",
+    "pages": [
+      10,
+      11,
+      12,
+      13,
+      14
+    ],
+    "kind": "concept",
+    "explanation": "Transform educational 3D point coordinates rather than claiming 3D image processing on a single photo.",
+    "formula": "Qprime=A_3x3*Q+t_3",
+    "operation_candidate": "point3d_demo"
+  },
+  {
+    "chapter": 4,
+    "topic": "Identity and negative intensity transforms",
+    "source": "Chap4-Image Transforms.pdf",
+    "pages": [
+      17,
+      18,
+      19
+    ],
+    "kind": "algorithm",
+    "explanation": "Preserve or invert valid-range gray/color intensities.",
+    "formula": "identity=r; negative=L-1-r",
+    "operation_candidate": "identity"
+  },
+  {
+    "chapter": 4,
+    "topic": "Log and inverse-log transforms",
+    "source": "Chap4-Image Transforms.pdf",
+    "pages": [
+      17,
+      20,
+      21
+    ],
+    "kind": "algorithm",
+    "explanation": "Compress or expand dynamic range with logarithmic/exponential mappings.",
+    "formula": "log=c*log(1+r); inverse_log=c*(exp(r)-1)",
+    "operation_candidate": "log_transform"
+  },
+  {
+    "chapter": 4,
+    "topic": "Power-law/gamma, nth-power and nth-root transforms",
+    "source": "Chap4-Image Transforms.pdf",
+    "pages": [
+      17,
+      22,
+      23,
+      24,
+      25
+    ],
+    "kind": "algorithm",
+    "explanation": "Control midtone brightness through normalized power curve.",
+    "formula": "s=c*r^gamma",
+    "operation_candidate": "gamma"
+  },
+  {
+    "chapter": 4,
+    "topic": "Piecewise-linear and sigmoid/power-law contrast stretching",
+    "source": "Chap4-Image Transforms.pdf",
+    "pages": [
+      26,
+      28,
+      29,
+      30
+    ],
+    "kind": "algorithm",
+    "explanation": "Control-point contrast curve or smooth S-shaped contrast about midpoint.",
+    "formula": "s=1/(1+(m/r)^E)",
+    "operation_candidate": "piecewise_stretch"
+  },
+  {
+    "chapter": 4,
+    "topic": "Binary threshold and intensity-level slicing",
+    "source": "Chap4-Image Transforms.pdf",
+    "pages": [
+      26,
+      27,
+      31,
+      33
+    ],
+    "kind": "algorithm",
+    "explanation": "Create binary threshold; emphasize selected range with black or retained background.",
+    "formula": "binary=(r>=T); slice=255 if lower<=r<=upper else background",
+    "operation_candidate": "intensity_slice"
+  },
+  {
+    "chapter": 4,
+    "topic": "Bit-plane slicing",
+    "source": "Chap4-Image Transforms.pdf",
+    "pages": [
+      26,
+      32
+    ],
+    "kind": "algorithm",
+    "explanation": "Inspect each of eight binary bit planes and selected-bit reconstruction.",
+    "formula": "plane_k=((r>>k)&1)*255",
+    "operation_candidate": "bit_plane"
+  },
+  {
+    "chapter": 4,
+    "topic": "1D/2D impulse, shifting and sifting properties",
+    "source": "Chap4-Image Transforms.pdf",
+    "pages": [
+      34,
+      35,
+      37
+    ],
+    "kind": "concept",
+    "explanation": "Discrete impulse and sampling a value with impulse multiplication/convolution.",
+    "formula": "sum(f[n]*delta[n-n0])=f[n0]; f*delta_shift=shift(f)",
+    "operation_candidate": "impulse_demo"
+  },
+  {
+    "chapter": 4,
+    "topic": "Nyquist-Shannon sampling theorem and aliasing",
+    "source": "Chap4-Image Transforms.pdf",
+    "pages": [
+      36
+    ],
+    "kind": "concept",
+    "explanation": "Sampling frequency must exceed twice the maximum signal frequency for ideal reconstruction.",
+    "formula": "Fs>=2*Fmax",
+    "operation_candidate": "sampling_demo"
+  },
+  {
+    "chapter": 4,
+    "topic": "Fourier series and basis patterns",
+    "source": "Chap4-Image Transforms.pdf",
+    "pages": [
+      40,
+      41,
+      42,
+      43
+    ],
+    "kind": "concept",
+    "explanation": "Periodic signal/image as sums of sine/cosine basis patterns with coefficient weights.",
+    "formula": "f(x,y)=sum(C_uv*exp(j*2*pi*(u*x/M+v*y/N)))",
+    "operation_candidate": "fourier_series_demo"
+  },
+  {
+    "chapter": 4,
+    "topic": "Fourier spectrum, magnitude, phase and frequency centering",
+    "source": "Chap4-Image Transforms.pdf",
+    "pages": [
+      44,
+      45
+    ],
+    "kind": "algorithm",
+    "explanation": "View log magnitude/phase and shifted DC-centered spectrum.",
+    "formula": "display=log(1+abs(fftshift(F))); phase=angle(F)",
+    "operation_candidate": "fft"
+  },
+  {
+    "chapter": 4,
+    "topic": "Linear forward/inverse transforms, separable/symmetric kernels",
+    "source": "Chap4-Image Transforms.pdf",
+    "pages": [
+      46,
+      47,
+      48
+    ],
+    "kind": "concept",
+    "explanation": "2D transform kernel decomposition and forward/inverse relationships.",
+    "formula": "F(u,v)=sum(f(x,y)*K(x,y,u,v))",
+    "operation_candidate": "transform_kernel_demo"
+  },
+  {
+    "chapter": 4,
+    "topic": "2D DFT and FFT",
+    "source": "Chap4-Image Transforms.pdf",
+    "pages": [
+      49,
+      51,
+      52,
+      53,
+      54,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67
+    ],
+    "kind": "algorithm",
+    "explanation": "Compute 2D complex frequency coefficients; FFT is efficient evaluation of the same DFT.",
+    "formula": "F(u,v)=sum(f(x,y)*exp(-j*2*pi*(u*x/M+v*y/N)))",
+    "operation_candidate": "fft"
+  },
+  {
+    "chapter": 4,
+    "topic": "IDFT and reconstruction",
+    "source": "Chap4-Image Transforms.pdf",
+    "pages": [
+      52,
+      53,
+      54,
+      68,
+      69,
+      70,
+      71,
+      72
+    ],
+    "kind": "algorithm",
+    "explanation": "Recover spatial image from complex coefficients with reconstruction error report.",
+    "formula": "f(x,y)=sum(F(u,v)*exp(j*2*pi*(u*x/M+v*y/N)))/(M*N)",
+    "operation_candidate": "idft"
+  },
+  {
+    "chapter": 4,
+    "topic": "Convolution theorem and zero-padding",
+    "source": "Chap4-Image Transforms.pdf",
+    "pages": [
+      55,
+      56,
+      57
+    ],
+    "kind": "algorithm",
+    "explanation": "Compare spatial convolution and FFT product with sufficient padding; avoid circular wraparound.",
+    "formula": "FFT(f*h)=FFT(f)*FFT(h); P>=M+m-1; Q>=N+n-1",
+    "operation_candidate": "convolution_theorem"
+  },
+  {
+    "chapter": 4,
+    "topic": "Discrete cosine transform and inverse DCT",
+    "source": "Chap4-Image Transforms.pdf",
+    "pages": [
+      3,
+      50
+    ],
+    "kind": "algorithm",
+    "explanation": "Real cosine coefficient image, energy compaction and inverse reconstruction.",
+    "formula": "F=C_M*f*C_N^T",
+    "operation_candidate": "dct"
+  },
+  {
+    "chapter": 4,
+    "topic": "Wavelet transform and multiresolution",
+    "source": "Chap4-Image Transforms.pdf",
+    "pages": [
+      3,
+      50
+    ],
+    "kind": "algorithm",
+    "explanation": "Spatially localized subband analysis, mapped to chapter 2 wavelet operations.",
+    "formula": "",
+    "operation_candidate": "wavelet"
+  },
+  {
+    "chapter": 4,
+    "topic": "Walsh sequency transform and inverse",
+    "source": "Chap4-Image Transforms.pdf",
+    "pages": [
+      75,
+      76,
+      77,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84,
+      85
+    ],
+    "kind": "algorithm",
+    "explanation": "Order orthogonal +/-1 basis by sign changes, transform and reconstruct.",
+    "formula": "F=W*f*W^T",
+    "operation_candidate": "walsh"
+  },
+  {
+    "chapter": 4,
+    "topic": "Natural-order Hadamard transform and inverse",
+    "source": "Chap4-Image Transforms.pdf",
+    "pages": [
+      86,
+      87,
+      88,
+      89,
+      90,
+      91
+    ],
+    "kind": "algorithm",
+    "explanation": "Recursive Sylvester basis +/-1 transform distinct basis ordering from Walsh sequency.",
+    "formula": "H_2N=[[H_N,H_N],[H_N,-H_N]]; F=H*f*H^T",
+    "operation_candidate": "hadamard"
+  },
+  {
+    "chapter": 4,
+    "topic": "Fast Walsh-Hadamard butterfly algorithm",
+    "source": "Chap4-Image Transforms.pdf",
+    "pages": [
+      75,
+      77,
+      83,
+      92,
+      93,
+      94,
+      95,
+      96,
+      97,
+      98,
+      99
+    ],
+    "kind": "concept",
+    "explanation": "Apply sum/difference butterfly operations along rows and columns; power-of-two support.",
+    "formula": "(a,b)->(a+b,a-b)",
+    "operation_candidate": "fwht_demo"
+  },
+  {
+    "chapter": 4,
+    "topic": "PCA/KLT/Hotelling block transform and reconstruction",
+    "source": "Chap4-Image Transforms.pdf",
+    "pages": [
+      100,
+      101,
+      102,
+      103,
+      104,
+      105,
+      106,
+      107,
+      108,
+      109,
+      110,
+      111
+    ],
+    "kind": "algorithm",
+    "explanation": "Estimate covariance of multiple image blocks, eigenbasis, decorrelated coefficients and retained-component reconstruction.",
+    "formula": "C=mean((X-mu)*(X-mu)^T); Y=A^T*(X-mu); Xhat=A*Y+mu",
+    "operation_candidate": "klt"
+  },
+  {
+    "chapter": 4,
+    "topic": "Transform applications and energy compaction",
+    "source": "Chap4-Image Transforms.pdf",
+    "pages": [
+      50,
+      76,
+      80,
+      88,
+      93,
+      100
+    ],
+    "kind": "concept",
+    "explanation": "Compression, watermarking, feature extraction, eigenfaces/recognition and denoising.",
+    "formula": "",
+    "operation_candidate": "energy_compaction_demo"
+  }
+]

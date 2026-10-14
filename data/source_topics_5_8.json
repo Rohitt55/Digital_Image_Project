@@ -1,0 +1,2037 @@
+{
+  "chapters": [
+    5,
+    6,
+    7,
+    8
+  ],
+  "total_pages": 549,
+  "topics": [
+    {
+      "chapter": 5,
+      "topic": "Segmentation fundamentals and processing workflow",
+      "source": "Chap5-Image Segmentation.pdf",
+      "pages": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "kind": "concept",
+      "explanation": "Partition image into meaningful regions; preprocessing, segmentation, morphological postprocessing, feature extraction.",
+      "formula": ""
+    },
+    {
+      "chapter": 5,
+      "topic": "Segmentation method taxonomy",
+      "source": "Chap5-Image Segmentation.pdf",
+      "pages": [
+        7
+      ],
+      "kind": "concept",
+      "explanation": "Threshold, edge, region, clustering, neural networks and watershed families.",
+      "formula": ""
+    },
+    {
+      "chapter": 5,
+      "topic": "Dice coefficient",
+      "source": "Chap5-Image Segmentation.pdf",
+      "pages": [
+        6
+      ],
+      "kind": "algorithm",
+      "explanation": "Compare binary segmentation with a ground-truth mask.",
+      "formula": "2|A intersect B|/(|A|+|B|)"
+    },
+    {
+      "chapter": 5,
+      "topic": "Intersection over union (Jaccard)",
+      "source": "Chap5-Image Segmentation.pdf",
+      "pages": [
+        6
+      ],
+      "kind": "algorithm",
+      "explanation": "Compare binary segmentation with a ground-truth mask.",
+      "formula": "|A intersect B|/|A union B|"
+    },
+    {
+      "chapter": 5,
+      "topic": "Pixel accuracy",
+      "source": "Chap5-Image Segmentation.pdf",
+      "pages": [
+        6
+      ],
+      "kind": "algorithm",
+      "explanation": "Compare binary segmentation with a ground-truth mask.",
+      "formula": "(TP+TN)/(TP+TN+FP+FN)"
+    },
+    {
+      "chapter": 5,
+      "topic": "Precision",
+      "source": "Chap5-Image Segmentation.pdf",
+      "pages": [
+        6
+      ],
+      "kind": "algorithm",
+      "explanation": "Compare binary segmentation with a ground-truth mask.",
+      "formula": "TP/(TP+FP)"
+    },
+    {
+      "chapter": 5,
+      "topic": "Recall",
+      "source": "Chap5-Image Segmentation.pdf",
+      "pages": [
+        6
+      ],
+      "kind": "algorithm",
+      "explanation": "Compare binary segmentation with a ground-truth mask.",
+      "formula": "TP/(TP+FN)"
+    },
+    {
+      "chapter": 5,
+      "topic": "Manual global thresholding",
+      "source": "Chap5-Image Segmentation.pdf",
+      "pages": [
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "kind": "algorithm",
+      "explanation": "Binarize grayscale image with a single threshold; fingerprint/document examples.",
+      "formula": "g=1 if f>=T else 0"
+    },
+    {
+      "chapter": 5,
+      "topic": "Iterative global thresholding (ISODATA)",
+      "source": "Chap5-Image Segmentation.pdf",
+      "pages": [
+        11,
+        19
+      ],
+      "kind": "algorithm",
+      "explanation": "Repeatedly average foreground/background group means until threshold stabilizes.",
+      "formula": "Tnext=(mean(G1)+mean(G2))/2"
+    },
+    {
+      "chapter": 5,
+      "topic": "Adaptive mean thresholding",
+      "source": "Chap5-Image Segmentation.pdf",
+      "pages": [
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29
+      ],
+      "kind": "algorithm",
+      "explanation": "Threshold each pixel using its local neighborhood mean.",
+      "formula": "T(x,y)=local_mean-C"
+    },
+    {
+      "chapter": 5,
+      "topic": "Lane detection pipeline",
+      "source": "Chap5-Image Segmentation.pdf",
+      "pages": [
+        30,
+        31,
+        32,
+        33
+      ],
+      "kind": "algorithm",
+      "explanation": "Illustrate thresholding, edges, Hough line detection and lane center; still-image demo only.",
+      "formula": ""
+    },
+    {
+      "chapter": 5,
+      "topic": "Adaptive Gaussian thresholding",
+      "source": "Chap5-Image Segmentation.pdf",
+      "pages": [
+        36,
+        37,
+        38,
+        39,
+        40,
+        41
+      ],
+      "kind": "algorithm",
+      "explanation": "Gaussian weighted local mean defines threshold.",
+      "formula": "T(x,y)=GaussianWeightedMean-C"
+    },
+    {
+      "chapter": 5,
+      "topic": "Local binary pattern (LBP)",
+      "source": "Chap5-Image Segmentation.pdf",
+      "pages": [
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49
+      ],
+      "kind": "algorithm",
+      "explanation": "Compare each of eight neighbors to center; encode texture and compute LBP histogram.",
+      "formula": "LBP=sum(s(Ip-Ic)*2^p)"
+    },
+    {
+      "chapter": 5,
+      "topic": "Local patterns of gradients (LPG)",
+      "source": "Chap5-Image Segmentation.pdf",
+      "pages": [
+        50,
+        119,
+        120,
+        121
+      ],
+      "kind": "algorithm",
+      "explanation": "Calculate Sobel magnitude then binary local comparisons and texture histogram.",
+      "formula": ""
+    },
+    {
+      "chapter": 5,
+      "topic": "Vehicle count from sensor pulses",
+      "source": "Chap5-Image Segmentation.pdf",
+      "pages": [
+        51,
+        52
+      ],
+      "kind": "concept",
+      "explanation": "Scalar worked example estimating vehicles from pulse count; not an image recognizer.",
+      "formula": "vehicles=sum(pulses)/2"
+    },
+    {
+      "chapter": 5,
+      "topic": "Connected-component object counting",
+      "source": "Chap5-Image Segmentation.pdf",
+      "pages": [
+        53,
+        54,
+        55
+      ],
+      "kind": "algorithm",
+      "explanation": "Label connected foreground objects; example uses four-connectivity.",
+      "formula": ""
+    },
+    {
+      "chapter": 5,
+      "topic": "Otsu optimum global thresholding",
+      "source": "Chap5-Image Segmentation.pdf",
+      "pages": [
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78
+      ],
+      "kind": "algorithm",
+      "explanation": "Choose threshold maximizing histogram between-class variance.",
+      "formula": "sigma_B^2=w1*w2*(mu1-mu2)^2; T*=argmax sigma_B^2"
+    },
+    {
+      "chapter": 5,
+      "topic": "Point detection",
+      "source": "Chap5-Image Segmentation.pdf",
+      "pages": [
+        81
+      ],
+      "kind": "algorithm",
+      "explanation": "Convolve with center-eight Laplacian point mask and threshold response.",
+      "formula": "kernel=[[-1,-1,-1],[-1,8,-1],[-1,-1,-1]]"
+    },
+    {
+      "chapter": 5,
+      "topic": "Directional line detection",
+      "source": "Chap5-Image Segmentation.pdf",
+      "pages": [
+        82,
+        83
+      ],
+      "kind": "algorithm",
+      "explanation": "Detect horizontal, vertical and diagonal lines with directional masks.",
+      "formula": ""
+    },
+    {
+      "chapter": 5,
+      "topic": "Hough line transform",
+      "source": "Chap5-Image Segmentation.pdf",
+      "pages": [
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93
+      ],
+      "kind": "algorithm",
+      "explanation": "Vote in rho/theta accumulator to recover lines.",
+      "formula": "rho=x*cos(theta)+y*sin(theta)"
+    },
+    {
+      "chapter": 5,
+      "topic": "Gradient edge detection and direction",
+      "source": "Chap5-Image Segmentation.pdf",
+      "pages": [
+        96,
+        97,
+        99,
+        107
+      ],
+      "kind": "concept",
+      "explanation": "First derivatives give edge strength and direction.",
+      "formula": "G=sqrt(Gx^2+Gy^2); theta=atan2(Gy,Gx)"
+    },
+    {
+      "chapter": 5,
+      "topic": "Edge linking and hysteresis",
+      "source": "Chap5-Image Segmentation.pdf",
+      "pages": [
+        98,
+        99,
+        100,
+        101,
+        102
+      ],
+      "kind": "algorithm",
+      "explanation": "Keep strong edges and connected weak neighbors; link boundaries.",
+      "formula": ""
+    },
+    {
+      "chapter": 5,
+      "topic": "Sobel edge detection",
+      "source": "Chap5-Image Segmentation.pdf",
+      "pages": [
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118
+      ],
+      "kind": "algorithm",
+      "explanation": "Weighted 3x3 horizontal/vertical gradients.",
+      "formula": ""
+    },
+    {
+      "chapter": 5,
+      "topic": "Bone fracture edge demonstration",
+      "source": "Chap5-Image Segmentation.pdf",
+      "pages": [
+        109,
+        110,
+        111
+      ],
+      "kind": "concept",
+      "explanation": "Sobel plus morphology and gap inspection on supplied educational matrix; no diagnosis.",
+      "formula": ""
+    },
+    {
+      "chapter": 5,
+      "topic": "Prewitt edge detection",
+      "source": "Chap5-Image Segmentation.pdf",
+      "pages": [
+        124,
+        125,
+        126,
+        127,
+        128,
+        129,
+        130,
+        131,
+        132,
+        133
+      ],
+      "kind": "algorithm",
+      "explanation": "Uniform 3x3 horizontal and vertical derivative masks.",
+      "formula": ""
+    },
+    {
+      "chapter": 5,
+      "topic": "Roberts cross edge detection",
+      "source": "Chap5-Image Segmentation.pdf",
+      "pages": [
+        134,
+        135,
+        136,
+        137
+      ],
+      "kind": "algorithm",
+      "explanation": "Two 2x2 diagonal derivative masks.",
+      "formula": ""
+    },
+    {
+      "chapter": 5,
+      "topic": "Canny edge detection",
+      "source": "Chap5-Image Segmentation.pdf",
+      "pages": [
+        140,
+        141,
+        142,
+        143,
+        144,
+        145,
+        146,
+        147,
+        148,
+        149,
+        150,
+        151,
+        152,
+        153,
+        154,
+        155,
+        156,
+        157,
+        158,
+        159,
+        160,
+        161
+      ],
+      "kind": "algorithm",
+      "explanation": "Gaussian smoothing, gradients, nonmaximum suppression, double thresholds, hysteresis.",
+      "formula": ""
+    },
+    {
+      "chapter": 5,
+      "topic": "Nonmaximum suppression",
+      "source": "Chap5-Image Segmentation.pdf",
+      "pages": [
+        150
+      ],
+      "kind": "concept",
+      "explanation": "Suppress nonmaximal gradient pixels along edge direction.",
+      "formula": ""
+    },
+    {
+      "chapter": 5,
+      "topic": "Edge operator comparison",
+      "source": "Chap5-Image Segmentation.pdf",
+      "pages": [
+        103,
+        161,
+        192
+      ],
+      "kind": "concept",
+      "explanation": "Compare masks, sensitivity to noise and edge thickness.",
+      "formula": ""
+    },
+    {
+      "chapter": 5,
+      "topic": "Laplacian edge detection",
+      "source": "Chap5-Image Segmentation.pdf",
+      "pages": [
+        164,
+        165,
+        166,
+        167,
+        168,
+        169
+      ],
+      "kind": "algorithm",
+      "explanation": "Second derivative highlights abrupt intensity changes.",
+      "formula": "L=f(x+1,y)+f(x-1,y)+f(x,y+1)+f(x,y-1)-4f(x,y)"
+    },
+    {
+      "chapter": 5,
+      "topic": "Laplacian of Gaussian / Marr-Hildreth",
+      "source": "Chap5-Image Segmentation.pdf",
+      "pages": [
+        170,
+        171,
+        172,
+        173,
+        174,
+        175,
+        176,
+        177,
+        178,
+        179,
+        180,
+        181,
+        182,
+        183,
+        184,
+        185
+      ],
+      "kind": "algorithm",
+      "explanation": "Gaussian smoothing followed by Laplacian zero crossings.",
+      "formula": "LoG=laplacian(G_sigma * f)"
+    },
+    {
+      "chapter": 5,
+      "topic": "Difference of Gaussians",
+      "source": "Chap5-Image Segmentation.pdf",
+      "pages": [
+        186,
+        187,
+        188,
+        189,
+        190,
+        191,
+        192,
+        193,
+        194,
+        195,
+        196
+      ],
+      "kind": "algorithm",
+      "explanation": "Subtract differently smoothed images as LoG approximation.",
+      "formula": "DoG=G_sigma1*f-G_sigma2*f"
+    },
+    {
+      "chapter": 5,
+      "topic": "Gradient with thresholding",
+      "source": "Chap5-Image Segmentation.pdf",
+      "pages": [
+        197
+      ],
+      "kind": "algorithm",
+      "explanation": "Threshold gradient magnitude to obtain a binary boundary map.",
+      "formula": ""
+    },
+    {
+      "chapter": 5,
+      "topic": "Seeded region growing",
+      "source": "Chap5-Image Segmentation.pdf",
+      "pages": [
+        200,
+        201,
+        202,
+        203,
+        204,
+        205,
+        206,
+        207,
+        208,
+        209,
+        210,
+        211,
+        212,
+        213,
+        214,
+        215,
+        216,
+        217,
+        218,
+        219,
+        220
+      ],
+      "kind": "algorithm",
+      "explanation": "Grow connected region under intensity similarity to seed or updated regional mean.",
+      "formula": "abs(I-mu_R)<T"
+    },
+    {
+      "chapter": 5,
+      "topic": "Four/eight connectivity and region stopping",
+      "source": "Chap5-Image Segmentation.pdf",
+      "pages": [
+        201
+      ],
+      "kind": "concept",
+      "explanation": "Neighbor definition and termination when no candidate meets criterion.",
+      "formula": ""
+    },
+    {
+      "chapter": 5,
+      "topic": "Feature-based K-means clustering",
+      "source": "Chap5-Image Segmentation.pdf",
+      "pages": [
+        221,
+        222,
+        253
+      ],
+      "kind": "algorithm",
+      "explanation": "Group intensities or colors by nearest centroid independently of connectivity.",
+      "formula": ""
+    },
+    {
+      "chapter": 5,
+      "topic": "Graph-search border tracing",
+      "source": "Chap5-Image Segmentation.pdf",
+      "pages": [
+        223,
+        224,
+        225
+      ],
+      "kind": "algorithm",
+      "explanation": "Find boundary pixels and traverse their adjacency graph with DFS/BFS.",
+      "formula": ""
+    },
+    {
+      "chapter": 5,
+      "topic": "Adjacent region merging",
+      "source": "Chap5-Image Segmentation.pdf",
+      "pages": [
+        226,
+        227
+      ],
+      "kind": "algorithm",
+      "explanation": "Merge neighboring similar regions using intensity criterion.",
+      "formula": ""
+    },
+    {
+      "chapter": 5,
+      "topic": "Quadtree region splitting and merging",
+      "source": "Chap5-Image Segmentation.pdf",
+      "pages": [
+        228,
+        229,
+        230,
+        231,
+        232
+      ],
+      "kind": "algorithm",
+      "explanation": "Split heterogeneous regions then merge compatible adjacent regions.",
+      "formula": "homogeneous if max(region)-min(region)<=T"
+    },
+    {
+      "chapter": 5,
+      "topic": "Watershed segmentation",
+      "source": "Chap5-Image Segmentation.pdf",
+      "pages": [
+        235,
+        236,
+        237,
+        238,
+        239,
+        240,
+        241,
+        242,
+        243,
+        244,
+        245,
+        246,
+        247,
+        248,
+        249,
+        250,
+        251,
+        252
+      ],
+      "kind": "algorithm",
+      "explanation": "Flood gradient/topographic minima with markers; dams separate catchment basins.",
+      "formula": ""
+    },
+    {
+      "chapter": 5,
+      "topic": "Fuzzy C-means",
+      "source": "Chap5-Image Segmentation.pdf",
+      "pages": [
+        253
+      ],
+      "kind": "algorithm",
+      "explanation": "Soft membership in multiple clusters, suited to gradual boundaries.",
+      "formula": ""
+    },
+    {
+      "chapter": 5,
+      "topic": "Active contours (snakes)",
+      "source": "Chap5-Image Segmentation.pdf",
+      "pages": [
+        254
+      ],
+      "kind": "algorithm",
+      "explanation": "Evolve smooth curve under internal smoothness and external edge forces.",
+      "formula": "E=E_internal+E_external"
+    },
+    {
+      "chapter": 5,
+      "topic": "Level-set segmentation",
+      "source": "Chap5-Image Segmentation.pdf",
+      "pages": [
+        254
+      ],
+      "kind": "algorithm",
+      "explanation": "Represent evolving contour implicitly and allow topology changes.",
+      "formula": ""
+    },
+    {
+      "chapter": 5,
+      "topic": "CNN segmentation",
+      "source": "Chap5-Image Segmentation.pdf",
+      "pages": [
+        7,
+        255,
+        256
+      ],
+      "kind": "concept",
+      "explanation": "Model-based learned segmentation; expose architecture/workflow or a trained-model integration, not a fake inference.",
+      "formula": ""
+    },
+    {
+      "chapter": 5,
+      "topic": "Fully convolutional networks (FCN)",
+      "source": "Chap5-Image Segmentation.pdf",
+      "pages": [
+        7,
+        255,
+        256
+      ],
+      "kind": "concept",
+      "explanation": "Model-based learned segmentation; expose architecture/workflow or a trained-model integration, not a fake inference.",
+      "formula": ""
+    },
+    {
+      "chapter": 5,
+      "topic": "U-Net segmentation",
+      "source": "Chap5-Image Segmentation.pdf",
+      "pages": [
+        7,
+        255,
+        256
+      ],
+      "kind": "concept",
+      "explanation": "Model-based learned segmentation; expose architecture/workflow or a trained-model integration, not a fake inference.",
+      "formula": ""
+    },
+    {
+      "chapter": 5,
+      "topic": "Mask R-CNN instance segmentation",
+      "source": "Chap5-Image Segmentation.pdf",
+      "pages": [
+        7,
+        255,
+        256
+      ],
+      "kind": "concept",
+      "explanation": "Model-based learned segmentation; expose architecture/workflow or a trained-model integration, not a fake inference.",
+      "formula": ""
+    },
+    {
+      "chapter": 6,
+      "topic": "Image degradation model",
+      "source": "Chap6-Image Restoration.pdf",
+      "pages": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "kind": "algorithm",
+      "explanation": "Blur with a point-spread function and add noise; spatial/frequency models.",
+      "formula": "g=h*f+n; G=HF+N"
+    },
+    {
+      "chapter": 6,
+      "topic": "Additive versus multiplicative noise",
+      "source": "Chap6-Image Restoration.pdf",
+      "pages": [
+        8
+      ],
+      "kind": "concept",
+      "explanation": "Noise may sum with signal or scale intensity.",
+      "formula": "g=f+n; g=f*n"
+    },
+    {
+      "chapter": 6,
+      "topic": "Gaussian noise",
+      "source": "Chap6-Image Restoration.pdf",
+      "pages": [
+        9,
+        10
+      ],
+      "kind": "algorithm",
+      "explanation": "Generate reproducible noise and compare image/histogram.",
+      "formula": "n~N(mu,sigma^2)"
+    },
+    {
+      "chapter": 6,
+      "topic": "Uniform noise",
+      "source": "Chap6-Image Restoration.pdf",
+      "pages": [
+        9,
+        11
+      ],
+      "kind": "algorithm",
+      "explanation": "Generate reproducible noise and compare image/histogram.",
+      "formula": "n~Uniform(a,b)"
+    },
+    {
+      "chapter": 6,
+      "topic": "Exponential noise",
+      "source": "Chap6-Image Restoration.pdf",
+      "pages": [
+        9,
+        12
+      ],
+      "kind": "algorithm",
+      "explanation": "Generate reproducible noise and compare image/histogram.",
+      "formula": "p(z)=a*exp(-a*z), z>=0"
+    },
+    {
+      "chapter": 6,
+      "topic": "Gamma (Erlang) noise",
+      "source": "Chap6-Image Restoration.pdf",
+      "pages": [
+        9,
+        13
+      ],
+      "kind": "algorithm",
+      "explanation": "Generate reproducible noise and compare image/histogram.",
+      "formula": "p(z)=a^b*z^(b-1)*exp(-a*z)/(b-1)!"
+    },
+    {
+      "chapter": 6,
+      "topic": "Rayleigh noise",
+      "source": "Chap6-Image Restoration.pdf",
+      "pages": [
+        9,
+        14
+      ],
+      "kind": "algorithm",
+      "explanation": "Generate reproducible noise and compare image/histogram.",
+      "formula": "p(z)=z/sigma^2*exp(-z^2/(2*sigma^2))"
+    },
+    {
+      "chapter": 6,
+      "topic": "Poisson photon noise",
+      "source": "Chap6-Image Restoration.pdf",
+      "pages": [
+        9,
+        15
+      ],
+      "kind": "algorithm",
+      "explanation": "Generate reproducible noise and compare image/histogram.",
+      "formula": "P(z)=lambda^z*exp(-lambda)/z!"
+    },
+    {
+      "chapter": 6,
+      "topic": "Speckle noise",
+      "source": "Chap6-Image Restoration.pdf",
+      "pages": [
+        9,
+        15
+      ],
+      "kind": "algorithm",
+      "explanation": "Generate reproducible noise and compare image/histogram.",
+      "formula": "multiplicative noise"
+    },
+    {
+      "chapter": 6,
+      "topic": "Salt-and-pepper impulse noise",
+      "source": "Chap6-Image Restoration.pdf",
+      "pages": [
+        9,
+        16
+      ],
+      "kind": "algorithm",
+      "explanation": "Generate reproducible noise and compare image/histogram.",
+      "formula": "replace random pixels with 0 or 255"
+    },
+    {
+      "chapter": 6,
+      "topic": "Noise statistics and signal-to-noise ratio",
+      "source": "Chap6-Image Restoration.pdf",
+      "pages": [
+        18,
+        19,
+        20,
+        21
+      ],
+      "kind": "algorithm",
+      "explanation": "Show expected mean, variance and SNR on original/degraded images.",
+      "formula": "SNR=10log10(Psignal/Pnoise)"
+    },
+    {
+      "chapter": 6,
+      "topic": "Median noise filter",
+      "source": "Chap6-Image Restoration.pdf",
+      "pages": [
+        22,
+        23
+      ],
+      "kind": "algorithm",
+      "explanation": "Replace neighborhood by median to remove impulse noise.",
+      "formula": ""
+    },
+    {
+      "chapter": 6,
+      "topic": "Arithmetic mean filter",
+      "source": "Chap6-Image Restoration.pdf",
+      "pages": [
+        24
+      ],
+      "kind": "algorithm",
+      "explanation": "Spatial restoration mean-filter family; expose order Q for contraharmonic.",
+      "formula": "sum(g)/(m*n)"
+    },
+    {
+      "chapter": 6,
+      "topic": "Geometric mean filter",
+      "source": "Chap6-Image Restoration.pdf",
+      "pages": [
+        24
+      ],
+      "kind": "algorithm",
+      "explanation": "Spatial restoration mean-filter family; expose order Q for contraharmonic.",
+      "formula": "exp(mean(log(g)))"
+    },
+    {
+      "chapter": 6,
+      "topic": "Harmonic mean filter",
+      "source": "Chap6-Image Restoration.pdf",
+      "pages": [
+        25
+      ],
+      "kind": "algorithm",
+      "explanation": "Spatial restoration mean-filter family; expose order Q for contraharmonic.",
+      "formula": "m*n/sum(1/g)"
+    },
+    {
+      "chapter": 6,
+      "topic": "Contraharmonic mean filter",
+      "source": "Chap6-Image Restoration.pdf",
+      "pages": [
+        25
+      ],
+      "kind": "algorithm",
+      "explanation": "Spatial restoration mean-filter family; expose order Q for contraharmonic.",
+      "formula": "sum(g^(Q+1))/sum(g^Q)"
+    },
+    {
+      "chapter": 6,
+      "topic": "Inverse filtering",
+      "source": "Chap6-Image Restoration.pdf",
+      "pages": [
+        30,
+        31,
+        32,
+        33,
+        34
+      ],
+      "kind": "algorithm",
+      "explanation": "Recover image by dividing by degradation transfer function; needs stable denominator.",
+      "formula": "Fhat=G/H"
+    },
+    {
+      "chapter": 6,
+      "topic": "Minimum-MSE Wiener deconvolution",
+      "source": "Chap6-Image Restoration.pdf",
+      "pages": [
+        35,
+        36,
+        37,
+        38,
+        39,
+        40
+      ],
+      "kind": "algorithm",
+      "explanation": "Regularized restoration using PSF and signal/noise spectrum ratio.",
+      "formula": "Fhat=conj(H)*G/(abs(H)^2+K)"
+    },
+    {
+      "chapter": 6,
+      "topic": "X-ray, CT, MRI modality comparison",
+      "source": "Chap6-Image Restoration.pdf",
+      "pages": [
+        42,
+        43,
+        44
+      ],
+      "kind": "concept",
+      "explanation": "Compare acquisition, appearance, enhancement, reconstruction and applications.",
+      "formula": ""
+    },
+    {
+      "chapter": 6,
+      "topic": "X-ray attenuation image formation",
+      "source": "Chap6-Image Restoration.pdf",
+      "pages": [
+        46
+      ],
+      "kind": "concept",
+      "explanation": "Projection measures exponential attenuation through tissue.",
+      "formula": "I=I0*exp(-integral(mu dz))"
+    },
+    {
+      "chapter": 6,
+      "topic": "Radon transform / CT sinogram",
+      "source": "Chap6-Image Restoration.pdf",
+      "pages": [
+        47,
+        48,
+        49,
+        50
+      ],
+      "kind": "algorithm",
+      "explanation": "Compute line-integral projections at multiple angles.",
+      "formula": ""
+    },
+    {
+      "chapter": 6,
+      "topic": "Filtered backprojection / inverse Radon",
+      "source": "Chap6-Image Restoration.pdf",
+      "pages": [
+        51,
+        63,
+        64,
+        65,
+        66
+      ],
+      "kind": "algorithm",
+      "explanation": "Ramp-filter sinogram projections then backproject; include unfiltered comparison.",
+      "formula": ""
+    },
+    {
+      "chapter": 6,
+      "topic": "Fourier slice theorem",
+      "source": "Chap6-Image Restoration.pdf",
+      "pages": [
+        53,
+        54,
+        55
+      ],
+      "kind": "concept",
+      "explanation": "Fourier transform of projection equals a slice of image Fourier transform.",
+      "formula": ""
+    },
+    {
+      "chapter": 6,
+      "topic": "ART algebraic reconstruction",
+      "source": "Chap6-Image Restoration.pdf",
+      "pages": [
+        52
+      ],
+      "kind": "concept",
+      "explanation": "Iterative CT estimate: project, compare measured data, update. Named at survey depth in PDF.",
+      "formula": ""
+    },
+    {
+      "chapter": 6,
+      "topic": "SIRT simultaneous iterative reconstruction",
+      "source": "Chap6-Image Restoration.pdf",
+      "pages": [
+        52
+      ],
+      "kind": "concept",
+      "explanation": "Iterative CT estimate: project, compare measured data, update. Named at survey depth in PDF.",
+      "formula": ""
+    },
+    {
+      "chapter": 6,
+      "topic": "MLEM reconstruction",
+      "source": "Chap6-Image Restoration.pdf",
+      "pages": [
+        52
+      ],
+      "kind": "concept",
+      "explanation": "Iterative CT estimate: project, compare measured data, update. Named at survey depth in PDF.",
+      "formula": ""
+    },
+    {
+      "chapter": 6,
+      "topic": "MRI formation and k-space reconstruction",
+      "source": "Chap6-Image Restoration.pdf",
+      "pages": [
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62
+      ],
+      "kind": "algorithm",
+      "explanation": "Demonstrate Fourier k-space and reconstruct with inverse FFT.",
+      "formula": "image=IFFT2(kspace)"
+    },
+    {
+      "chapter": 6,
+      "topic": "CT window/level mapping",
+      "source": "Chap6-Image Restoration.pdf",
+      "pages": [
+        44,
+        67,
+        71
+      ],
+      "kind": "algorithm",
+      "explanation": "Map specified HU window/level to grayscale; ordinary PNG values are not HU.",
+      "formula": ""
+    },
+    {
+      "chapter": 6,
+      "topic": "CT stroke worked example",
+      "source": "Chap6-Image Restoration.pdf",
+      "pages": [
+        67,
+        68,
+        69,
+        70,
+        71,
+        72
+      ],
+      "kind": "concept",
+      "explanation": "Educational matrix: hyperdense threshold, contralateral means, limits; no clinical inference.",
+      "formula": ""
+    },
+    {
+      "chapter": 6,
+      "topic": "MRI tumor processing worked example",
+      "source": "Chap6-Image Restoration.pdf",
+      "pages": [
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82
+      ],
+      "kind": "concept",
+      "explanation": "Supplied toy matrix: median preprocessing, normalization, threshold segmentation, morphology and features; not a classifier.",
+      "formula": ""
+    },
+    {
+      "chapter": 6,
+      "topic": "Shape/region feature extraction",
+      "source": "Chap6-Image Restoration.pdf",
+      "pages": [
+        78,
+        87
+      ],
+      "kind": "algorithm",
+      "explanation": "Measure area, perimeter, centroid, mean intensity, compactness.",
+      "formula": ""
+    },
+    {
+      "chapter": 6,
+      "topic": "Ultrasound processing workflow",
+      "source": "Chap6-Image Restoration.pdf",
+      "pages": [
+        83,
+        85,
+        86,
+        88
+      ],
+      "kind": "concept",
+      "explanation": "Speckle reduction, contrast, segmentation, features and classification.",
+      "formula": ""
+    },
+    {
+      "chapter": 6,
+      "topic": "Adaptive local Wiener filtering",
+      "source": "Chap6-Image Restoration.pdf",
+      "pages": [
+        84
+      ],
+      "kind": "algorithm",
+      "explanation": "Estimate local mean/variance and suppress noise adaptively.",
+      "formula": "Ihat=mu+max(0,var-noise_var)/var*(I-mu)"
+    },
+    {
+      "chapter": 6,
+      "topic": "Anisotropic diffusion",
+      "source": "Chap6-Image Restoration.pdf",
+      "pages": [
+        44,
+        84
+      ],
+      "kind": "algorithm",
+      "explanation": "Iterative edge-preserving nonlinear diffusion.",
+      "formula": "dI/dt=div(c*gradient(I))"
+    },
+    {
+      "chapter": 6,
+      "topic": "Nonlocal means denoising",
+      "source": "Chap6-Image Restoration.pdf",
+      "pages": [
+        44
+      ],
+      "kind": "algorithm",
+      "explanation": "Patch similarity averaging; named modality-table technique.",
+      "formula": ""
+    },
+    {
+      "chapter": 6,
+      "topic": "GLCM texture features",
+      "source": "Chap6-Image Restoration.pdf",
+      "pages": [
+        87
+      ],
+      "kind": "algorithm",
+      "explanation": "Compute contrast, correlation, energy and homogeneity from co-occurrence matrix.",
+      "formula": ""
+    },
+    {
+      "chapter": 6,
+      "topic": "Wavelet speckle denoising",
+      "source": "Chap6-Image Restoration.pdf",
+      "pages": [
+        87,
+        89
+      ],
+      "kind": "algorithm",
+      "explanation": "Decompose, threshold coefficients and reconstruct.",
+      "formula": ""
+    },
+    {
+      "chapter": 6,
+      "topic": "MRI bias-field correction",
+      "source": "Chap6-Image Restoration.pdf",
+      "pages": [
+        44,
+        45,
+        89
+      ],
+      "kind": "concept",
+      "explanation": "Named modality survey topic; educational explanation/workflow without unsupported medical processing claims.",
+      "formula": ""
+    },
+    {
+      "chapter": 6,
+      "topic": "MRI phase unwrapping",
+      "source": "Chap6-Image Restoration.pdf",
+      "pages": [
+        44,
+        45,
+        89
+      ],
+      "kind": "concept",
+      "explanation": "Named modality survey topic; educational explanation/workflow without unsupported medical processing claims.",
+      "formula": ""
+    },
+    {
+      "chapter": 6,
+      "topic": "MRI Rician noise reduction",
+      "source": "Chap6-Image Restoration.pdf",
+      "pages": [
+        44,
+        45,
+        89
+      ],
+      "kind": "concept",
+      "explanation": "Named modality survey topic; educational explanation/workflow without unsupported medical processing claims.",
+      "formula": ""
+    },
+    {
+      "chapter": 6,
+      "topic": "Registration and MRI-CT fusion",
+      "source": "Chap6-Image Restoration.pdf",
+      "pages": [
+        44,
+        45,
+        89
+      ],
+      "kind": "concept",
+      "explanation": "Named modality survey topic; educational explanation/workflow without unsupported medical processing claims.",
+      "formula": ""
+    },
+    {
+      "chapter": 6,
+      "topic": "Motion and metal artifact correction",
+      "source": "Chap6-Image Restoration.pdf",
+      "pages": [
+        44,
+        45,
+        89
+      ],
+      "kind": "concept",
+      "explanation": "Named modality survey topic; educational explanation/workflow without unsupported medical processing claims.",
+      "formula": ""
+    },
+    {
+      "chapter": 6,
+      "topic": "3D volume reconstruction/visualization",
+      "source": "Chap6-Image Restoration.pdf",
+      "pages": [
+        44,
+        45,
+        89
+      ],
+      "kind": "concept",
+      "explanation": "Named modality survey topic; educational explanation/workflow without unsupported medical processing claims.",
+      "formula": ""
+    },
+    {
+      "chapter": 6,
+      "topic": "Classification algorithms (SVM, random forest, k-NN, CNN)",
+      "source": "Chap6-Image Restoration.pdf",
+      "pages": [
+        79,
+        87
+      ],
+      "kind": "concept",
+      "explanation": "Features or learned representations need labeled datasets and validation.",
+      "formula": ""
+    },
+    {
+      "chapter": 7,
+      "topic": "Compression fundamentals and storage budget",
+      "source": "Chap7-Image Compression.pdf",
+      "pages": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "kind": "concept",
+      "explanation": "Storage, bandwidth, redundancy and raw video example.",
+      "formula": ""
+    },
+    {
+      "chapter": 7,
+      "topic": "Compression ratio",
+      "source": "Chap7-Image Compression.pdf",
+      "pages": [
+        5,
+        6
+      ],
+      "kind": "algorithm",
+      "explanation": "Report compression or reconstruction quality.",
+      "formula": "CR=original_size/compressed_size"
+    },
+    {
+      "chapter": 7,
+      "topic": "Relative redundancy / efficiency",
+      "source": "Chap7-Image Compression.pdf",
+      "pages": [
+        5,
+        6
+      ],
+      "kind": "algorithm",
+      "explanation": "Report compression or reconstruction quality.",
+      "formula": "1-1/CR"
+    },
+    {
+      "chapter": 7,
+      "topic": "Bit rate",
+      "source": "Chap7-Image Compression.pdf",
+      "pages": [
+        5,
+        6
+      ],
+      "kind": "algorithm",
+      "explanation": "Report compression or reconstruction quality.",
+      "formula": "compressed_bits/(width*height)"
+    },
+    {
+      "chapter": 7,
+      "topic": "Mean squared error",
+      "source": "Chap7-Image Compression.pdf",
+      "pages": [
+        5,
+        6
+      ],
+      "kind": "algorithm",
+      "explanation": "Report compression or reconstruction quality.",
+      "formula": "MSE=mean((f-fhat)^2)"
+    },
+    {
+      "chapter": 7,
+      "topic": "Peak signal-to-noise ratio",
+      "source": "Chap7-Image Compression.pdf",
+      "pages": [
+        5,
+        6
+      ],
+      "kind": "algorithm",
+      "explanation": "Report compression or reconstruction quality.",
+      "formula": "PSNR=10log10(255^2/MSE)"
+    },
+    {
+      "chapter": 7,
+      "topic": "Encoder/decoder model and lossless/lossy taxonomy",
+      "source": "Chap7-Image Compression.pdf",
+      "pages": [
+        7,
+        8,
+        9,
+        14,
+        15
+      ],
+      "kind": "concept",
+      "explanation": "Mapper, quantizer and symbol coder; reversible coding versus lossy quantization.",
+      "formula": ""
+    },
+    {
+      "chapter": 7,
+      "topic": "Predictive coding / DPCM",
+      "source": "Chap7-Image Compression.pdf",
+      "pages": [
+        10,
+        11,
+        12,
+        13
+      ],
+      "kind": "algorithm",
+      "explanation": "Predict from previous pixel and encode residual; optional lossy residual quantization.",
+      "formula": "e=x-prediction"
+    },
+    {
+      "chapter": 7,
+      "topic": "Run-length encoding",
+      "source": "Chap7-Image Compression.pdf",
+      "pages": [
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "kind": "algorithm",
+      "explanation": "Represent repeated symbols as value/count pairs and reconstruct exactly.",
+      "formula": ""
+    },
+    {
+      "chapter": 7,
+      "topic": "Coding redundancy and variable-length coding",
+      "source": "Chap7-Image Compression.pdf",
+      "pages": [
+        21,
+        22,
+        23,
+        24,
+        25
+      ],
+      "kind": "concept",
+      "explanation": "Compare fixed-length and probability-weighted code lengths.",
+      "formula": "Lavg=sum(p_i*l_i)"
+    },
+    {
+      "chapter": 7,
+      "topic": "Huffman coding",
+      "source": "Chap7-Image Compression.pdf",
+      "pages": [
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        88,
+        89,
+        90,
+        91,
+        92
+      ],
+      "kind": "algorithm",
+      "explanation": "Build optimal prefix tree from symbol frequencies, encode and decode.",
+      "formula": ""
+    },
+    {
+      "chapter": 7,
+      "topic": "Entropy calculation",
+      "source": "Chap7-Image Compression.pdf",
+      "pages": [
+        88,
+        89,
+        90,
+        91,
+        92
+      ],
+      "kind": "algorithm",
+      "explanation": "Compare empirical entropy and average Huffman code length.",
+      "formula": "H=-sum(p*log2(p))"
+    },
+    {
+      "chapter": 7,
+      "topic": "Arithmetic coding",
+      "source": "Chap7-Image Compression.pdf",
+      "pages": [
+        33,
+        34,
+        35,
+        36
+      ],
+      "kind": "algorithm",
+      "explanation": "Narrow cumulative probability interval for symbol sequence; exact/integer implementation avoids floating underflow.",
+      "formula": ""
+    },
+    {
+      "chapter": 7,
+      "topic": "Golomb coding",
+      "source": "Chap7-Image Compression.pdf",
+      "pages": [
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44
+      ],
+      "kind": "algorithm",
+      "explanation": "Unary quotient plus truncated-binary remainder; user parameter M.",
+      "formula": "q=floor(n/M); r=n mod M"
+    },
+    {
+      "chapter": 7,
+      "topic": "Rice coding (power-of-two Golomb)",
+      "source": "Chap7-Image Compression.pdf",
+      "pages": [
+        41,
+        42,
+        43,
+        44
+      ],
+      "kind": "algorithm",
+      "explanation": "Golomb parameter M=2^k uses k-bit remainder.",
+      "formula": ""
+    },
+    {
+      "chapter": 7,
+      "topic": "Order-k exponential-Golomb coding",
+      "source": "Chap7-Image Compression.pdf",
+      "pages": [
+        45,
+        46,
+        47
+      ],
+      "kind": "algorithm",
+      "explanation": "Encode nonnegative integers with unary length and binary suffix; expose order k.",
+      "formula": ""
+    },
+    {
+      "chapter": 7,
+      "topic": "LZW dictionary coding",
+      "source": "Chap7-Image Compression.pdf",
+      "pages": [
+        48,
+        49,
+        50
+      ],
+      "kind": "algorithm",
+      "explanation": "Grow dictionary of recurring symbol sequences and encode dictionary indices.",
+      "formula": ""
+    },
+    {
+      "chapter": 7,
+      "topic": "DCT transform coding (1D and 2D)",
+      "source": "Chap7-Image Compression.pdf",
+      "pages": [
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70
+      ],
+      "kind": "algorithm",
+      "explanation": "Transform blocks, quantize coefficients, reconstruct with inverse DCT.",
+      "formula": ""
+    },
+    {
+      "chapter": 7,
+      "topic": "JPEG DCT/quantization pipeline",
+      "source": "Chap7-Image Compression.pdf",
+      "pages": [
+        54,
+        55,
+        56,
+        57,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70
+      ],
+      "kind": "algorithm",
+      "explanation": "Level shift, block DCT, quantization, zigzag, RLE/entropy coding; show coefficients and reconstructed image.",
+      "formula": ""
+    },
+    {
+      "chapter": 7,
+      "topic": "Zigzag coefficient ordering",
+      "source": "Chap7-Image Compression.pdf",
+      "pages": [
+        70
+      ],
+      "kind": "algorithm",
+      "explanation": "Order low-frequency coefficients first for efficient zero-run coding.",
+      "formula": ""
+    },
+    {
+      "chapter": 7,
+      "topic": "MPEG I/P frames and motion-compensated residuals",
+      "source": "Chap7-Image Compression.pdf",
+      "pages": [
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        99,
+        100,
+        101,
+        102
+      ],
+      "kind": "algorithm",
+      "explanation": "Educational two-frame block matching, motion vectors, residual and reconstruction; not full video encoder.",
+      "formula": ""
+    },
+    {
+      "chapter": 7,
+      "topic": "H.263 DCT residual quantization",
+      "source": "Chap7-Image Compression.pdf",
+      "pages": [
+        82,
+        83,
+        84,
+        85,
+        86
+      ],
+      "kind": "algorithm",
+      "explanation": "Educational motion-compensated residual DCT and quantization; not standards-compliant codec.",
+      "formula": ""
+    },
+    {
+      "chapter": 7,
+      "topic": "Vector quantization",
+      "source": "Chap7-Image Compression.pdf",
+      "pages": [
+        93,
+        94,
+        95,
+        96,
+        97,
+        98
+      ],
+      "kind": "algorithm",
+      "explanation": "Replace pixel blocks by nearest learned codebook vector and store indices.",
+      "formula": ""
+    },
+    {
+      "chapter": 7,
+      "topic": "Compression standards, formats and containers",
+      "source": "Chap7-Image Compression.pdf",
+      "pages": [
+        103,
+        104,
+        105
+      ],
+      "kind": "concept",
+      "explanation": "Raster source tables: binary standards CCITT Group 3/4, JBIG/JBIG1, JBIG2; continuous-tone JPEG, JPEG-LS, JPEG-2000; formats/containers BMP, GIF, PDF, PNG, TIFF; video DV, H.261, H.262, H.263, H.264, MPEG-1/2/4, MPEG-4 AVC; containers/formats AVS, HDV, M-JPEG, QuickTime, VC-1/WMV9. Explain distinctions and lossless/lossy cases rather than implementing each codec.",
+      "formula": ""
+    },
+    {
+      "chapter": 8,
+      "topic": "Morphology foundations",
+      "source": "Chap8-Morphological Processing.pdf",
+      "pages": [
+        2
+      ],
+      "kind": "concept",
+      "explanation": "Shape operations on binary/grayscale sets.",
+      "formula": ""
+    },
+    {
+      "chapter": 8,
+      "topic": "Structuring elements, reflection and translation",
+      "source": "Chap8-Morphological Processing.pdf",
+      "pages": [
+        3,
+        4,
+        5
+      ],
+      "kind": "concept",
+      "explanation": "Kernel shape/size/origin probe local geometry; reflect/translate sets; source also illustrates running a cross kernel over a set and border erosion.",
+      "formula": ""
+    },
+    {
+      "chapter": 8,
+      "topic": "Image representation and description",
+      "source": "Chap8-Morphological Processing.pdf",
+      "pages": [
+        6
+      ],
+      "kind": "concept",
+      "explanation": "Raster slide shows object boundary representation and progressively simplified/polygonal boundary approximations; expose contour extraction and polygon approximation lesson.",
+      "formula": ""
+    },
+    {
+      "chapter": 8,
+      "topic": "Binary logical AND",
+      "source": "Chap8-Morphological Processing.pdf",
+      "pages": [
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "kind": "algorithm",
+      "explanation": "Threshold two images then combine foreground masks; NOT takes one image.",
+      "formula": "A & B"
+    },
+    {
+      "chapter": 8,
+      "topic": "Binary logical OR",
+      "source": "Chap8-Morphological Processing.pdf",
+      "pages": [
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "kind": "algorithm",
+      "explanation": "Threshold two images then combine foreground masks; NOT takes one image.",
+      "formula": "A | B"
+    },
+    {
+      "chapter": 8,
+      "topic": "Binary logical XOR",
+      "source": "Chap8-Morphological Processing.pdf",
+      "pages": [
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "kind": "algorithm",
+      "explanation": "Threshold two images then combine foreground masks; NOT takes one image.",
+      "formula": "A xor B"
+    },
+    {
+      "chapter": 8,
+      "topic": "Binary logical NOT",
+      "source": "Chap8-Morphological Processing.pdf",
+      "pages": [
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "kind": "algorithm",
+      "explanation": "Threshold two images then combine foreground masks; NOT takes one image.",
+      "formula": "not A"
+    },
+    {
+      "chapter": 8,
+      "topic": "Binary logical NAND",
+      "source": "Chap8-Morphological Processing.pdf",
+      "pages": [
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "kind": "algorithm",
+      "explanation": "Threshold two images then combine foreground masks; NOT takes one image.",
+      "formula": "not(A & B)"
+    },
+    {
+      "chapter": 8,
+      "topic": "Binary logical NOR",
+      "source": "Chap8-Morphological Processing.pdf",
+      "pages": [
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "kind": "algorithm",
+      "explanation": "Threshold two images then combine foreground masks; NOT takes one image.",
+      "formula": "not(A | B)"
+    },
+    {
+      "chapter": 8,
+      "topic": "Binary erosion",
+      "source": "Chap8-Morphological Processing.pdf",
+      "pages": [
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        22,
+        23,
+        24
+      ],
+      "kind": "algorithm",
+      "explanation": "Keep positions where whole structuring element fits foreground.",
+      "formula": "A erode B"
+    },
+    {
+      "chapter": 8,
+      "topic": "Grayscale erosion",
+      "source": "Chap8-Morphological Processing.pdf",
+      "pages": [
+        25,
+        26,
+        32
+      ],
+      "kind": "algorithm",
+      "explanation": "Neighborhood minimum shrinks bright regions.",
+      "formula": ""
+    },
+    {
+      "chapter": 8,
+      "topic": "Binary dilation",
+      "source": "Chap8-Morphological Processing.pdf",
+      "pages": [
+        13,
+        14,
+        15,
+        20,
+        21,
+        27,
+        28
+      ],
+      "kind": "algorithm",
+      "explanation": "Expand foreground by structuring element.",
+      "formula": "A dilate B"
+    },
+    {
+      "chapter": 8,
+      "topic": "Grayscale dilation",
+      "source": "Chap8-Morphological Processing.pdf",
+      "pages": [
+        29,
+        30,
+        31,
+        32
+      ],
+      "kind": "algorithm",
+      "explanation": "Neighborhood maximum expands bright regions.",
+      "formula": ""
+    },
+    {
+      "chapter": 8,
+      "topic": "Binary and grayscale opening",
+      "source": "Chap8-Morphological Processing.pdf",
+      "pages": [
+        35,
+        37,
+        38,
+        39,
+        40,
+        44,
+        45,
+        46,
+        47,
+        84,
+        85
+      ],
+      "kind": "algorithm",
+      "explanation": "Erosion then dilation removes small bright objects.",
+      "formula": "open(A)=(A erode B) dilate B"
+    },
+    {
+      "chapter": 8,
+      "topic": "Binary and grayscale closing",
+      "source": "Chap8-Morphological Processing.pdf",
+      "pages": [
+        36,
+        37,
+        41,
+        42,
+        43,
+        44,
+        45,
+        48,
+        49,
+        84,
+        86
+      ],
+      "kind": "algorithm",
+      "explanation": "Dilation then erosion fills small holes.",
+      "formula": "close(A)=(A dilate B) erode B"
+    },
+    {
+      "chapter": 8,
+      "topic": "Hit-or-miss transform",
+      "source": "Chap8-Morphological Processing.pdf",
+      "pages": [
+        50,
+        51,
+        52,
+        53,
+        54,
+        55
+      ],
+      "kind": "algorithm",
+      "explanation": "Exact foreground/background pattern matching.",
+      "formula": "HMT=(A erode B1) intersect (Ac erode B2)"
+    },
+    {
+      "chapter": 8,
+      "topic": "Morphological gradient",
+      "source": "Chap8-Morphological Processing.pdf",
+      "pages": [
+        56,
+        57,
+        58,
+        59,
+        60
+      ],
+      "kind": "algorithm",
+      "explanation": "Difference between dilation and erosion highlights boundary.",
+      "formula": "gradient=dilate(A)-erode(A)"
+    },
+    {
+      "chapter": 8,
+      "topic": "White top-hat",
+      "source": "Chap8-Morphological Processing.pdf",
+      "pages": [
+        61,
+        62,
+        63,
+        64,
+        65
+      ],
+      "kind": "algorithm",
+      "explanation": "Extract small bright details.",
+      "formula": "WTH=A-open(A)"
+    },
+    {
+      "chapter": 8,
+      "topic": "Black top-hat",
+      "source": "Chap8-Morphological Processing.pdf",
+      "pages": [
+        61,
+        62,
+        66
+      ],
+      "kind": "algorithm",
+      "explanation": "Extract small dark details; correct PDF typo uses closing, not opening.",
+      "formula": "BTH=close(A)-A"
+    },
+    {
+      "chapter": 8,
+      "topic": "Morphological skeletonization / thinning",
+      "source": "Chap8-Morphological Processing.pdf",
+      "pages": [
+        69,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83
+      ],
+      "kind": "algorithm",
+      "explanation": "Repeated erosion and opening differences form skeleton; PDF conflates skeletonization and thinning.",
+      "formula": "S=union_k((A erode kB)-open(A erode kB))"
+    },
+    {
+      "chapter": 8,
+      "topic": "Skeleton pruning",
+      "source": "Chap8-Morphological Processing.pdf",
+      "pages": [
+        70
+      ],
+      "kind": "algorithm",
+      "explanation": "Remove small terminal spurs from skeleton while retaining long branches.",
+      "formula": ""
+    },
+    {
+      "chapter": 8,
+      "topic": "Lung CT transfer learning worked example",
+      "source": "Chap8-Morphological Processing.pdf",
+      "pages": [
+        87,
+        88,
+        89,
+        90,
+        91
+      ],
+      "kind": "concept",
+      "explanation": "ResNet/VGG feature extractor with toy logistic classifier; source gives fixed features and sigmoid arithmetic, not trained diagnosis.",
+      "formula": "y=sigmoid(w dot f+b)"
+    },
+    {
+      "chapter": 8,
+      "topic": "DeepFace expression workflow worked example",
+      "source": "Chap8-Morphological Processing.pdf",
+      "pages": [
+        92,
+        93,
+        94,
+        95
+      ],
+      "kind": "concept",
+      "explanation": "Face detection/alignment, fixed feature vector, class scores and decision; model needed for real inference.",
+      "formula": "score=w dot f"
+    }
+  ],
+  "notes": [
+    "All PDF pages extracted once into chapter_text_5_8.json; recurring examples consolidated.",
+    "Raster source tables inspected via pypdf image extraction; named compression standards retained in survey explanation, boundary-representation figures identified.",
+    "Formula transcription corrects obvious source typos (Dice, Wiener conjugate, black top-hat).",
+    "Advanced DL/medical examples require transparent conceptual or fixed-matrix demonstrations unless validated trained models exist."
+  ]
+}
