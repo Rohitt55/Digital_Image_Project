@@ -1,6 +1,6 @@
 # PixelLab — Digital Image Processing
 
-আপনার দেওয়া আটটি chapter PDF, Python lab code, DIP-Lab1, DIP-Lab2 ও FFT/DFT/IDFT task-এর ভিত্তিতে তৈরি local web app। এখন **১৩৪টি runnable operation** এবং **২৬৪টি source-page-linked topic** আছে। ছবি upload করে operation ও parameter বাছুন; Python backend কাজ করবে। Browser-এ ছবি, histogram/CDF, statistics, Python code এবং terminal-এর মতো ফল দেখুন।
+ এখন **১৩৪টি runnable operation** এবং **২৬৪টি source-page-linked topic** আছে। ছবি upload করে operation ও parameter বাছুন; Python backend কাজ করবে। Browser-এ ছবি, histogram/CDF, statistics, Python code এবং terminal-এর মতো ফল দেখুন।
 
 ## চালানোর নিয়ম
 
